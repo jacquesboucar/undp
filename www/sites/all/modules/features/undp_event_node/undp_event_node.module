@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the undp event node feature.
+ */
+
+include_once 'undp_event_node.features.inc';

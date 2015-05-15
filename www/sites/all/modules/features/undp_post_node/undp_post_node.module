@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the undp post node feature.
+ */
+
+include_once 'undp_post_node.features.inc';

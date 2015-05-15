@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the und config feature.
+ */
+
+include_once 'und_config.features.inc';

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the undp event views feature.
+ */
+
+include_once 'undp_event_views.features.inc';

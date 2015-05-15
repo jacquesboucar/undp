@@ -1,0 +1,4 @@
+name = "Undp Config"
+description = Undp config module. This module is responsible for general undp config and update
+package = "UNDP Development"
+core = 7.x

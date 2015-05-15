@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the undp formation node feature.
+ */
+
+include_once 'undp_formation_node.features.inc';

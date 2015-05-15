@@ -1,0 +1,42 @@
+<?php
+/**
+ * @file
+ * Install, update, and uninstall functions.
+ */
+
+/**
+ * Enable following module.
+ */
+function undp_config_update_7000() {
+  module_enable(
+    array(
+      'ctools',	
+      'views',
+      'views_ui',
+      'context',
+      'context_ui',
+      'entity',
+      'libraries',
+      'features',
+      'strongarm',
+      'pathauto',
+    ),
+    TRUE
+  );
+}
+
+/**
+ * Enable following features.
+ */
+function undp_config_update_7001() {
+  module_enable(
+    array(
+      'und_config',	
+      'undp_event_node',
+      'undp_event_views',
+      'undp_formation_node',
+      'undp_post_node',
+    ),
+    TRUE
+  );
+}
