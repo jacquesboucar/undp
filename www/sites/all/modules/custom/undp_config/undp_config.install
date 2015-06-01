@@ -7,7 +7,7 @@
 /**
  * Enable following module.
  */
-function undp_config_update_7000() {
+function undp_config_update_7005() {
   module_enable(
     array(
       'ctools',	
@@ -29,7 +29,7 @@ function undp_config_update_7000() {
 /**
  * Enable following features.
  */
-function undp_config_update_7001() {
+function undp_config_update_7006() {
   module_enable(
     array(
       'und_config',	
@@ -45,7 +45,7 @@ function undp_config_update_7001() {
 /**
  * Enable following features.
  */
-function undp_config_update_7002() {
+function undp_config_update_7007() {
   module_enable(
     array(
       'undp_user_profile',
@@ -61,7 +61,7 @@ function undp_config_update_7002() {
 /**
  * Enable following features.
  */
-function undp_config_update_7003() {
+function undp_config_update_7008() {
   module_enable(
     array(
       'undp_social_sharing',
@@ -73,7 +73,7 @@ function undp_config_update_7003() {
 /**
  * Create following pages.
  */
-function undp_config_update_7004() {
+function undp_config_update_7009() {
   $body_text = "";
   $page = new stdClass();
   $page->type = 'page';
