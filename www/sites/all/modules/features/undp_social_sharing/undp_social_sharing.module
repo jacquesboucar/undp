@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the undp social sharing feature.
+ */
+
+include_once 'undp_social_sharing.features.inc';

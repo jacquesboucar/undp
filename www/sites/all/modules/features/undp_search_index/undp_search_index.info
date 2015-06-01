@@ -1,0 +1,8 @@
+name = undp search index
+core = 7.x
+package = UNDP SEARCH
+dependencies[] = entity
+dependencies[] = search_api
+dependencies[] = search_api_db
+features[features_api][] = api:2
+features[search_api_server][] = mysql

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the undp expert views feature.
+ */
+
+include_once 'undp_expert_views.features.inc';

@@ -1,0 +1,11 @@
+name = undp context
+core = 7.x
+package = UNDP CONTEXT
+dependencies[] = context
+dependencies[] = ctools
+features[context][] = expert_layout
+features[context][] = homepage_layout
+features[ctools][] = context:context:3
+features[features_api][] = api:2
+features_exclude[dependencies][facetapi] = facetapi
+features_exclude[dependencies][views] = views

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the undp search index feature.
+ */
+
+include_once 'undp_search_index.features.inc';

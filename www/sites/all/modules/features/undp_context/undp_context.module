@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the undp context feature.
+ */
+
+include_once 'undp_context.features.inc';
