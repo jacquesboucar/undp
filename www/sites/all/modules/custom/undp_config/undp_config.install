@@ -98,3 +98,32 @@ function undp_config_update_7009() {
   $page->path = array('alias' => $path);
   node_save($page);
 }  
+
+/**
+ * Enable bootstrap and undp theme.
+ */
+function undp_config_update_7010(){
+  theme_enable(
+    array(
+      'bootstrap',
+      'undp',
+    ),
+    TRUE
+  );
+
+}
+
+/**
+ * Enable following module.
+ */
+function undp_config_update_7011(){
+  module_enable(
+    array(
+      'bootstrap_library',
+      'jquery_update',
+      'undp_formation_view'
+    ),
+    TRUE
+  );
+
+}

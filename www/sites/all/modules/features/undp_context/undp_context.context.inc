@@ -67,6 +67,12 @@ function undp_context_context_default_contexts() {
           'region' => 'sidebar_second',
           'weight' => '-9',
         ),
+        'views-undp_formation-block' => array(
+          'module' => 'views',
+          'delta' => 'undp_formation-block',
+          'region' => 'content',
+          'weight' => '-10',
+        ),
       ),
     ),
   );

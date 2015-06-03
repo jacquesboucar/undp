@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the undp formation view feature.
+ */
+
+include_once 'undp_formation_view.features.inc';

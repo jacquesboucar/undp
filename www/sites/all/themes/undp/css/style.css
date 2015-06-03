@@ -1,0 +1,98 @@
+/**
+ * This file should get overwritten if Method 1 is used. If Method 2 is chosen,
+ * remove this comment and start adding your styles to this file.
+ */
+
+
+header#navbar{
+    color: #ffffff;
+    background: #000000 url('../images/header-bg.png') no-repeat center;
+    background-size: cover;
+    overflow: auto;
+    min-height: 250px;
+}
+
+header .navbar.container{
+    margin-top: 0px;
+}
+
+.navbar-default,.navbar-collapse {
+    background: none;
+    border: none;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    background: none;
+    color: #ffffff;
+}
+a.logo{
+    display: block;
+    margin: 0 auto;
+    float: none;
+}
+
+fieldset.webform-component-fieldset{
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+fieldset.webform-component-fieldset.panel-default > .panel-heading{
+    font-size: 2em;
+    font-weight: 100;
+    line-height: 2em;
+}
+fieldset.webform-component-fieldset.panel-default > .panel-heading a{
+    font-size: 2em;
+}
+fieldset.webform-component--contact-info.panel-default > .panel-heading {
+    background: #ff8259;
+    color: #ffffff;
+}
+fieldset.webform-component--contact-info .form-control,fieldset.webform-component--contact-info .form-email{
+
+    -webkit-box-shadow: initial;
+    -moz-box-shadow: initial;
+    box-shadow: initial;
+}
+fieldset.webform-component--demographic-info .form-control{
+
+    -webkit-box-shadow: initial;
+    -moz-box-shadow: initial;
+    box-shadow: initial;
+    width: 49%;
+    float: left;
+}
+fieldset.webform-component--demographic-info.panel-default > .panel-heading {
+    background: #e270d3;
+    color: #ffffff;
+}
+fieldset.webform-component--professionnal-info.panel-default > .panel-heading {
+    background: #48bbbe;
+    color: #ffffff;
+}
+fieldset.webform-component--informations-of-friend.panel-default > .panel-heading {
+    background: #4cde8a;
+    color: #ffffff;
+}
+fieldset .form-control,fieldset .form-email{
+    height: 54px;
+    line-height: 28px;
+    font-weight: 100;
+    font-size: 2em;
+    -webkit-border-radius: px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border:none;
+    border-bottom: 1px solid #e1e1e1;
+
+}
+
+fieldset .form-email{
+    background-color: #fff;
+    background-image: none;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    color: #555;
+    display: block;
+    padding: 6px 12px;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    width: 100%;
+}
