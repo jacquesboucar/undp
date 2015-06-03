@@ -121,6 +121,7 @@ function undp_config_update_7011(){
     array(
       'bootstrap_library',
       'jquery_update',
+      'youtube',
       'undp_formation_view'
     ),
     TRUE
