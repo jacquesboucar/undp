@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the undp page basic feature.
+ */
+
+include_once 'undp_page_basic.features.inc';

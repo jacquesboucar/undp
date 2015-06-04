@@ -2,3 +2,50 @@
 /**
  * @file
  */
+/**
+ * Implements hook_block_info().
+ */
+function undp_config_block_info() {
+ 	$blocks = array();
+ 	$blocks['undp_footer_menu'] = array(
+     'info' => t('Undp footer menu'),
+    );
+    return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function undp_config_block_view($delta = '') {
+   switch ($delta) {
+     case 'undp_footer_menu':
+       $block['subject'] = 'Menu';
+       $block['content'] = undp_config_get_content($delta);
+       return $block;
+       break;
+   }
+}   
+
+function undp_config_get_content($delta = '') {
+  switch ($delta) {
+
+    case 'undp_footer_menu':
+      //$items = array();
+      $accueil = l("Accueil", '<front>');
+      $post = l("Discussions", 'actualites');
+      $biblio = l("Bibliothèque", 'bibliothèque');
+      $condition = l("Conditions d’utilisation", 'conditions-d’utilisation');
+      $items['items'] = array($accueil, $post, $biblio, $condition);
+      $content = theme('item_list', $items);
+      return $content;
+      break; 
+  }
+}  
+/**
+ * Implements hook_block_info().
+ */
+function undp_config_block_view_alter(&$data, $block) {
+   if ($block->module == 'on_the_web') {
+     unset($data['subject']);
+   }
+}		

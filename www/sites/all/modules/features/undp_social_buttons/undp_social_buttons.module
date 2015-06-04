@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the undp social buttons feature.
+ */
+
+include_once 'undp_social_buttons.features.inc';

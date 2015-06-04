@@ -128,3 +128,18 @@ function undp_config_update_7011(){
   );
 
 }
+
+/**
+ * Enable following module.
+ */
+function undp_config_update_7012(){
+  module_enable(
+    array(
+      'undp_page_basic',
+      'undp_post_views',
+      'undp_social_buttons',
+    ),
+    TRUE
+  );
+
+}

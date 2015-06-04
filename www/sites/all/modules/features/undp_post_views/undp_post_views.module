@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the undp post views feature.
+ */
+
+include_once 'undp_post_views.features.inc';
