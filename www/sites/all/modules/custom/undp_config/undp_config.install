@@ -143,3 +143,16 @@ function undp_config_update_7012(){
   );
 
 }
+
+/**
+ * Enable following module.
+ */
+function undp_config_update_7013(){
+  module_enable(
+    array(
+      'undp_main_menu',
+    ),
+    TRUE
+  );
+
+}
