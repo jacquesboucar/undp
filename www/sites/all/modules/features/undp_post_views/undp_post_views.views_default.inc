@@ -22,7 +22,7 @@ function undp_post_views_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Discussions';
+  $handler->display->display_options['title'] = 'Actualités';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['link_display'] = 'custom_url';
   $handler->display->display_options['access']['type'] = 'perm';
@@ -33,6 +33,17 @@ function undp_post_views_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* Field: Content: Image */
+  $handler->display->display_options['fields']['field_post_image']['id'] = 'field_post_image';
+  $handler->display->display_options['fields']['field_post_image']['table'] = 'field_data_field_post_image';
+  $handler->display->display_options['fields']['field_post_image']['field'] = 'field_post_image';
+  $handler->display->display_options['fields']['field_post_image']['label'] = '';
+  $handler->display->display_options['fields']['field_post_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_post_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_post_image']['settings'] = array(
+    'image_style' => 'medium',
+    'image_link' => 'content',
+  );
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -40,6 +51,25 @@ function undp_post_views_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Post date */
+  $handler->display->display_options['fields']['created']['id'] = 'created';
+  $handler->display->display_options['fields']['created']['table'] = 'node';
+  $handler->display->display_options['fields']['created']['field'] = 'created';
+  $handler->display->display_options['fields']['created']['label'] = 'Publié le';
+  $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['created']['date_format'] = 'custom';
+  $handler->display->display_options['fields']['created']['custom_date_format'] = 'd.m.Y';
+  $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
+  /* Field: Content: Catégorie */
+  $handler->display->display_options['fields']['field_post_category']['id'] = 'field_post_category';
+  $handler->display->display_options['fields']['field_post_category']['table'] = 'field_data_field_post_category';
+  $handler->display->display_options['fields']['field_post_category']['field'] = 'field_post_category';
+  $handler->display->display_options['fields']['field_post_category']['label'] = 'Catégories ';
+  /* Field: Content: Tag */
+  $handler->display->display_options['fields']['field_post_tag']['id'] = 'field_post_tag';
+  $handler->display->display_options['fields']['field_post_tag']['table'] = 'field_data_field_post_tag';
+  $handler->display->display_options['fields']['field_post_tag']['field'] = 'field_post_tag';
+  $handler->display->display_options['fields']['field_post_tag']['label'] = 'Mots clés ';
   /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
@@ -48,8 +78,15 @@ function undp_post_views_views_default_views() {
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
   $handler->display->display_options['fields']['body']['settings'] = array(
-    'trim_length' => '600',
+    'trim_length' => '300',
   );
+  /* Field: Content: Link */
+  $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['label'] = '';
+  $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['view_node']['text'] = 'Lire la suite';
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -82,7 +119,7 @@ function undp_post_views_views_default_views() {
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['defaults']['use_more_text'] = FALSE;
-  $handler->display->display_options['use_more_text'] = 'Voir plus';
+  $handler->display->display_options['use_more_text'] = 'Voir toutes les actualités';
   $handler->display->display_options['defaults']['link_display'] = FALSE;
   $handler->display->display_options['link_display'] = 'custom_url';
   $handler->display->display_options['link_url'] = 'actualites';

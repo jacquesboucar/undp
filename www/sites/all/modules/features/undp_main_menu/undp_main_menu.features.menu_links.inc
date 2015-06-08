@@ -10,6 +10,26 @@
 function undp_main_menu_menu_default_menu_links() {
   $menu_links = array();
 
+  // Exported menu link: main-menu_experts:experts
+  $menu_links['main-menu_experts:experts'] = array(
+    'menu_name' => 'main-menu',
+    'link_path' => 'experts',
+    'router_path' => 'experts',
+    'link_title' => 'Experts',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'main-menu_experts:experts',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -48,
+    'customized' => 1,
+  );
   // Exported menu link: main-menu_home:<front>
   $menu_links['main-menu_home:<front>'] = array(
     'menu_name' => 'main-menu',
@@ -24,33 +44,13 @@ function undp_main_menu_menu_default_menu_links() {
     'external' => 1,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => 0,
-    'customized' => 0,
-  );
-  // Exported menu link: main-menu_qui-fait-quoi:experts
-  $menu_links['main-menu_qui-fait-quoi:experts'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'experts',
-    'router_path' => 'experts',
-    'link_title' => 'Qui fait quoi',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-      'identifier' => 'main-menu_qui-fait-quoi:experts',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
+    'weight' => -50,
     'customized' => 1,
   );
   // Translatables
   // Included for use with string extractors like potx.
+  t('Experts');
   t('Home');
-  t('Qui fait quoi');
 
 
   return $menu_links;
