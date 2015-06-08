@@ -105,21 +105,24 @@
       </div>
     <?php endif; ?>
   </div>
-  <?php if ($logo): ?>
-    <div class="logo">
+  <?php // if ($logo): ?>
+  <!--
+	  <div class="logo">
       <div class="container">
         <a class="logo col-xs-12 col-sm-5 col-md-5" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
           <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
         </a>
       </div>
     </div>
+   !-->
 
-  <?php endif; ?>
+  <?php // endif; ?> 
 </header>
 
 <div class="main-container container">
 
   <header role="banner" id="page-header">
+	  
     <?php if (!empty($site_slogan)): ?>
 <!--      <p class="lead">--><?php //print $site_slogan; ?><!--</p>-->
     <?php endif; ?>
@@ -130,7 +133,7 @@
   <div class="row">
 
     <?php if (!empty($page['sidebar_first'])): ?>
-      <aside class="col-sm-3" role="complementary">
+      < claasidess="col-sm-3" role="complementary">
         <?php print render($page['sidebar_first']); ?>
       </aside>  <!-- /#sidebar-first -->
     <?php endif; ?>
