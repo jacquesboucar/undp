@@ -18,7 +18,8 @@ function undp_search_index_default_search_api_server() {
       "database" : "default:default",
       "min_chars" : "1",
       "partial_matches" : 0,
-      "indexes" : { "undp_expert_index" : {
+      "indexes" : {
+        "undp_expert_index" : {
           "uid" : {
             "table" : "search_api_db_undp_expert_index",
             "column" : "uid",
@@ -73,6 +74,65 @@ function undp_search_index_default_search_api_server() {
             "table" : "search_api_db_undp_expert_index",
             "column" : "search_api_language",
             "type" : "string",
+            "boost" : "1.0"
+          }
+        },
+        "post_index" : {
+          "nid" : {
+            "table" : "search_api_db_post_index",
+            "column" : "nid",
+            "type" : "integer",
+            "boost" : "1.0"
+          },
+          "type" : {
+            "table" : "search_api_db_post_index",
+            "column" : "type",
+            "type" : "string",
+            "boost" : "1.0"
+          },
+          "title" : {
+            "table" : "search_api_db_post_index_text",
+            "type" : "text",
+            "boost" : "1.0"
+          },
+          "field_post_category" : {
+            "table" : "search_api_db_post_index",
+            "column" : "field_post_category",
+            "type" : "integer",
+            "boost" : "1.0"
+          },
+          "field_post_tag" : {
+            "table" : "search_api_db_post_index",
+            "column" : "field_post_tag",
+            "type" : "integer",
+            "boost" : "1.0"
+          },
+          "search_api_language" : {
+            "table" : "search_api_db_post_index",
+            "column" : "search_api_language",
+            "type" : "string",
+            "boost" : "1.0"
+          },
+          "field_post_image:file" : {
+            "table" : "search_api_db_post_index",
+            "column" : "field_post_image_file",
+            "type" : "integer",
+            "boost" : "1.0"
+          },
+          "body:value" : {
+            "table" : "search_api_db_post_index_text",
+            "type" : "text",
+            "boost" : "1.0"
+          },
+          "body:summary" : {
+            "table" : "search_api_db_post_index_text",
+            "type" : "text",
+            "boost" : "1.0"
+          },
+          "created" : {
+            "table" : "search_api_db_post_index",
+            "column" : "created",
+            "type" : "date",
             "boost" : "1.0"
           }
         }

@@ -36,3 +36,8 @@ function undp_css_alter(&$css) {
     'weight' => -1,
   );
 }
+
+function undp_facetapi_title($variables) {
+  $title = t($variables['title']);
+  return t('Filtrer par @title', array('@title' => drupal_strtolower($title)));
+}
