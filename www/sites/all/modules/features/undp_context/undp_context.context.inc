@@ -148,11 +148,17 @@ function undp_context_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'search-form' => array(
+          'module' => 'search',
+          'delta' => 'form',
+          'region' => 'header',
+          'weight' => '-10',
+        ),
         'on_the_web-0' => array(
           'module' => 'on_the_web',
           'delta' => '0',
           'region' => 'header',
-          'weight' => '-10',
+          'weight' => '-9',
         ),
         'undp_config-undp_footer_menu' => array(
           'module' => 'undp_config',

@@ -4,6 +4,7 @@ package = UNDP CONTEXT
 dependencies[] = context
 dependencies[] = ctools
 dependencies[] = on_the_web
+dependencies[] = search
 dependencies[] = undp_config
 features[context][] = expert_layout
 features[context][] = homepage_layout
