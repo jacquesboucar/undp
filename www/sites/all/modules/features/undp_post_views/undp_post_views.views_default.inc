@@ -184,6 +184,10 @@ function undp_post_views_views_default_views() {
   /* Display: Last post */
   $handler = $view->new_display('block', 'Last post', 'block_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
