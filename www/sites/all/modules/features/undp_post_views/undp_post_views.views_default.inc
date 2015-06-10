@@ -32,6 +32,17 @@ function undp_post_views_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* Field: Indexed Node: Image */
+  $handler->display->display_options['fields']['field_post_image']['id'] = 'field_post_image';
+  $handler->display->display_options['fields']['field_post_image']['table'] = 'search_api_index_post_index';
+  $handler->display->display_options['fields']['field_post_image']['field'] = 'field_post_image';
+  $handler->display->display_options['fields']['field_post_image']['label'] = '';
+  $handler->display->display_options['fields']['field_post_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_post_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_post_image']['settings'] = array(
+    'image_style' => 'medium',
+    'image_link' => 'content',
+  );
   /* Field: Indexed Node: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'search_api_index_post_index';
@@ -39,14 +50,31 @@ function undp_post_views_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_entity'] = 1;
-  /* Field: Indexed Node: Image » The image file. */
-  $handler->display->display_options['fields']['field_image_file']['id'] = 'field_image_file';
-  $handler->display->display_options['fields']['field_image_file']['table'] = 'search_api_index_post_index';
-  $handler->display->display_options['fields']['field_image_file']['field'] = 'field_image_file';
-  $handler->display->display_options['fields']['field_image_file']['label'] = '';
-  $handler->display->display_options['fields']['field_image_file']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_image_file']['link_to_entity'] = 0;
-  $handler->display->display_options['fields']['field_image_file']['bypass_access'] = 0;
+  /* Field: Indexed Node: Date created */
+  $handler->display->display_options['fields']['created']['id'] = 'created';
+  $handler->display->display_options['fields']['created']['table'] = 'search_api_index_post_index';
+  $handler->display->display_options['fields']['created']['field'] = 'created';
+  $handler->display->display_options['fields']['created']['label'] = 'Publié le ';
+  $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['created']['date_format'] = 'post';
+  $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
+  $handler->display->display_options['fields']['created']['link_to_entity'] = 0;
+  /* Field: Indexed Node: Catégorie */
+  $handler->display->display_options['fields']['field_post_category']['id'] = 'field_post_category';
+  $handler->display->display_options['fields']['field_post_category']['table'] = 'search_api_index_post_index';
+  $handler->display->display_options['fields']['field_post_category']['field'] = 'field_post_category';
+  $handler->display->display_options['fields']['field_post_category']['label'] = 'Catégories ';
+  $handler->display->display_options['fields']['field_post_category']['link_to_entity'] = 1;
+  $handler->display->display_options['fields']['field_post_category']['view_mode'] = 'full';
+  $handler->display->display_options['fields']['field_post_category']['bypass_access'] = 0;
+  /* Field: Indexed Node: Tag */
+  $handler->display->display_options['fields']['field_post_tag']['id'] = 'field_post_tag';
+  $handler->display->display_options['fields']['field_post_tag']['table'] = 'search_api_index_post_index';
+  $handler->display->display_options['fields']['field_post_tag']['field'] = 'field_post_tag';
+  $handler->display->display_options['fields']['field_post_tag']['label'] = 'Tags ';
+  $handler->display->display_options['fields']['field_post_tag']['link_to_entity'] = 1;
+  $handler->display->display_options['fields']['field_post_tag']['view_mode'] = 'full';
+  $handler->display->display_options['fields']['field_post_tag']['bypass_access'] = 0;
   /* Field: Indexed Node: The main body text */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'search_api_index_post_index';
@@ -55,17 +83,26 @@ function undp_post_views_views_default_views() {
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
   $handler->display->display_options['fields']['body']['settings'] = array(
-    'trim_length' => '600',
+    'trim_length' => '300',
   );
-  /* Field: Indexed Node: Tag */
-  $handler->display->display_options['fields']['field_post_tag']['id'] = 'field_post_tag';
-  $handler->display->display_options['fields']['field_post_tag']['table'] = 'search_api_index_post_index';
-  $handler->display->display_options['fields']['field_post_tag']['field'] = 'field_post_tag';
-  $handler->display->display_options['fields']['field_post_tag']['label'] = '';
-  $handler->display->display_options['fields']['field_post_tag']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_post_tag']['link_to_entity'] = 0;
-  $handler->display->display_options['fields']['field_post_tag']['view_mode'] = 'full';
-  $handler->display->display_options['fields']['field_post_tag']['bypass_access'] = 0;
+  /* Field: Content: Link */
+  $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['label'] = '';
+  $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['view_node']['text'] = 'Lire la suite';
+  /* Field: Indexed Node: ShareThis Link */
+  $handler->display->display_options['fields']['sharethis']['id'] = 'sharethis';
+  $handler->display->display_options['fields']['sharethis']['table'] = 'search_api_index_post_index';
+  $handler->display->display_options['fields']['sharethis']['field'] = 'sharethis';
+  $handler->display->display_options['fields']['sharethis']['label'] = '';
+  $handler->display->display_options['fields']['sharethis']['element_label_colon'] = FALSE;
+  /* Sort criterion: Indexed Node: Node ID */
+  $handler->display->display_options['sorts']['nid']['id'] = 'nid';
+  $handler->display->display_options['sorts']['nid']['table'] = 'search_api_index_post_index';
+  $handler->display->display_options['sorts']['nid']['field'] = 'nid';
+  $handler->display->display_options['sorts']['nid']['order'] = 'DESC';
   /* Filter criterion: Indexed Node: Content type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'search_api_index_post_index';
@@ -102,6 +139,17 @@ function undp_post_views_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* Field: Content: Image */
+  $handler->display->display_options['fields']['field_post_image']['id'] = 'field_post_image';
+  $handler->display->display_options['fields']['field_post_image']['table'] = 'field_data_field_post_image';
+  $handler->display->display_options['fields']['field_post_image']['field'] = 'field_post_image';
+  $handler->display->display_options['fields']['field_post_image']['label'] = '';
+  $handler->display->display_options['fields']['field_post_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_post_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_post_image']['settings'] = array(
+    'image_style' => 'medium',
+    'image_link' => 'content',
+  );
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -109,6 +157,24 @@ function undp_post_views_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Post date */
+  $handler->display->display_options['fields']['created']['id'] = 'created';
+  $handler->display->display_options['fields']['created']['table'] = 'node';
+  $handler->display->display_options['fields']['created']['field'] = 'created';
+  $handler->display->display_options['fields']['created']['label'] = 'Publié le ';
+  $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['created']['date_format'] = 'post';
+  $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
+  /* Field: Content: Catégorie */
+  $handler->display->display_options['fields']['field_post_category']['id'] = 'field_post_category';
+  $handler->display->display_options['fields']['field_post_category']['table'] = 'field_data_field_post_category';
+  $handler->display->display_options['fields']['field_post_category']['field'] = 'field_post_category';
+  $handler->display->display_options['fields']['field_post_category']['label'] = 'Catégories ';
+  /* Field: Content: Tag */
+  $handler->display->display_options['fields']['field_post_tag']['id'] = 'field_post_tag';
+  $handler->display->display_options['fields']['field_post_tag']['table'] = 'field_data_field_post_tag';
+  $handler->display->display_options['fields']['field_post_tag']['field'] = 'field_post_tag';
+  $handler->display->display_options['fields']['field_post_tag']['label'] = 'Tags ';
   /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
@@ -117,14 +183,20 @@ function undp_post_views_views_default_views() {
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
   $handler->display->display_options['fields']['body']['settings'] = array(
-    'trim_length' => '600',
+    'trim_length' => '300',
   );
-  /* Sort criterion: Content: Post date */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  $handler->display->display_options['sorts']['created']['granularity'] = 'month';
+  /* Field: Content: Link */
+  $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['label'] = '';
+  $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['view_node']['text'] = 'Lire la suite';
+  /* Sort criterion: Content: Nid */
+  $handler->display->display_options['sorts']['nid']['id'] = 'nid';
+  $handler->display->display_options['sorts']['nid']['table'] = 'node';
+  $handler->display->display_options['sorts']['nid']['field'] = 'nid';
+  $handler->display->display_options['sorts']['nid']['order'] = 'DESC';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -150,7 +222,7 @@ function undp_post_views_views_default_views() {
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['defaults']['use_more_text'] = FALSE;
-  $handler->display->display_options['use_more_text'] = 'Voir plus';
+  $handler->display->display_options['use_more_text'] = 'Voir toutes les actualités';
   $handler->display->display_options['defaults']['link_display'] = FALSE;
   $handler->display->display_options['link_display'] = 'custom_url';
   $handler->display->display_options['link_url'] = 'actualites';
@@ -184,11 +256,23 @@ function undp_post_views_views_default_views() {
   /* Display: Last post */
   $handler = $view->new_display('block', 'Last post', 'block_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Actualités';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Image */
+  $handler->display->display_options['fields']['field_post_image']['id'] = 'field_post_image';
+  $handler->display->display_options['fields']['field_post_image']['table'] = 'field_data_field_post_image';
+  $handler->display->display_options['fields']['field_post_image']['field'] = 'field_post_image';
+  $handler->display->display_options['fields']['field_post_image']['label'] = '';
+  $handler->display->display_options['fields']['field_post_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_post_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_post_image']['settings'] = array(
+    'image_style' => '',
+    'image_link' => 'content',
+  );
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -196,6 +280,24 @@ function undp_post_views_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Post date */
+  $handler->display->display_options['fields']['created']['id'] = 'created';
+  $handler->display->display_options['fields']['created']['table'] = 'node';
+  $handler->display->display_options['fields']['created']['field'] = 'created';
+  $handler->display->display_options['fields']['created']['label'] = 'Publié le ';
+  $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['created']['date_format'] = 'post';
+  $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
+  /* Field: Content: Catégorie */
+  $handler->display->display_options['fields']['field_post_category']['id'] = 'field_post_category';
+  $handler->display->display_options['fields']['field_post_category']['table'] = 'field_data_field_post_category';
+  $handler->display->display_options['fields']['field_post_category']['field'] = 'field_post_category';
+  $handler->display->display_options['fields']['field_post_category']['label'] = 'Catégories ';
+  /* Field: Content: Tag */
+  $handler->display->display_options['fields']['field_post_tag']['id'] = 'field_post_tag';
+  $handler->display->display_options['fields']['field_post_tag']['table'] = 'field_data_field_post_tag';
+  $handler->display->display_options['fields']['field_post_tag']['field'] = 'field_post_tag';
+  $handler->display->display_options['fields']['field_post_tag']['label'] = 'Tags ';
   /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
@@ -206,17 +308,13 @@ function undp_post_views_views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '600',
   );
-  /* Field: Content: Image */
-  $handler->display->display_options['fields']['field_post_image']['id'] = 'field_post_image';
-  $handler->display->display_options['fields']['field_post_image']['table'] = 'field_data_field_post_image';
-  $handler->display->display_options['fields']['field_post_image']['field'] = 'field_post_image';
-  $handler->display->display_options['fields']['field_post_image']['label'] = '';
-  $handler->display->display_options['fields']['field_post_image']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_post_image']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_post_image']['settings'] = array(
-    'image_style' => '',
-    'image_link' => '',
-  );
+  /* Field: Content: Link */
+  $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
+  $handler->display->display_options['fields']['view_node']['label'] = '';
+  $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['view_node']['text'] = 'Lire la suite';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';

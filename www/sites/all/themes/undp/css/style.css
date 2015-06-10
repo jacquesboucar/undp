@@ -104,20 +104,37 @@ ul.menu.nav.navbar-nav:first-child li.leaf:first-child {
 
 /** ACTUALITES BLOCK **/
 
-#block-views-discussions-block h2.block-title,
-h1.page-header {
+#block-views-discussions-block-1 h2.block-title,
+.page-actualites h1.page-header {
 	background:#00aeef;
 	color: #fff;
 	padding: 12px 15px;
 	margin-bottom: 30px;
 	border-bottom: none;
+	font-size: 30px;
+}
+
+#block-views-discussions-block h2.block-title {
+	display: none;
+}
+
+#block-views-discussions-block-1 .views-field-field-post-image img {
+	max-width: 817px;
+	height: auto;
+	margin-bottom: 20px;
+	max-height: auto;
 }
 
 #block-views-discussions-block .views-row,
-.view-discussions .views-row {
+.view-discussions .views-row,
+.page-actualites .region-content .views-row {
 	margin-bottom: 40px;
 	min-height: 147px;
 	padding: 0px 15px;
+}
+
+#block-views-discussions-block-1 .views-row {
+	margin-bottom: 50px;
 }
 
 #block-views-discussions-block .views-row:last-child {
@@ -133,29 +150,36 @@ h1.page-header {
 .view-discussions .views-field-created,
 .view-discussions .views-field-field-post-category,
 .view-discussions .views-field-field-post-tag,
-.view-discussions .views-field-body {
+.view-discussions .views-field-body,
+.page-actualites .region-content .views-field-title,
+.page-actualites .region-content .views-field-created,
+.page-actualites .region-content .views-field-field-post-category,
+.page-actualites .region-content .views-field-field-post-tag,
+.page-actualites .region-content .views-field-body {
 	margin-bottom: -2px;
 }
 
 #block-views-discussions-block .views-field-field-post-image,
-.view-discussions .views-field-field-post-image {
+.view-discussions .views-field-field-post-image,
+.page-actualites .region-content .views-field-field-post-image {
 	float: left;
 	margin-right: 30px;
 }
 
 #block-views-discussions-block .views-field-field-post-image a,
-.view-discussions .views-field-field-post-image a {
+.view-discussions .views-field-field-post-image a,
+.page-actualites .region-content .views-field-field-post-image a {
 	display: block;
-	z-index:100;
 }
 
 #block-views-discussions-block .views-field-field-post-image img,
-.view-discussions .views-field-field-post-image img {
+.page-actualites .region-content .views-field-field-post-image img {
 	max-height: 147px;
 }
 
 #block-views-discussions-block .views-field-view-node a,
-.view-discussions .views-field-view-node a {
+.view-discussions .views-field-view-node a,
+.page-actualites .region-content .views-field-view-node a {
 	color: #428BCA;
 	border: 0.1em solid #428BCA;
 	padding: 6px;
@@ -168,7 +192,11 @@ h1.page-header {
 }
 
 #block-views-discussions-block .views-field-view-node a:hover,
-.view-discussions .views-field-view-node a:hover {
+#block-views-discussions-block .views-field-view-node a:active,
+.view-discussions .views-field-view-node a:hover,
+.view-discussions .views-field-view-node a:active,
+.page-actualites .region-content .views-field-view-node a:hover,
+.page-actualites .region-content .views-field-view-node a:active {
 	color: #00aeef;
 	border: 0.1em solid #00aeef;
 	padding: 6px;
@@ -178,13 +206,18 @@ h1.page-header {
 }
 
 #block-views-discussions-block .views-field-title a,
-.view-discussions .views-field-title a {
+.view-discussions .views-field-title a,
+.page-actualites .region-content .views-field-title a {
 	font-size: 20px;
 	color: #428BCA;
 }
 
 #block-views-discussions-block .views-field-title a:hover,
-.view-discussions .views-field-title a:hover {
+#block-views-discussions-block .views-field-title a:active,
+.view-discussions .views-field-title a:hover,
+.view-discussions .views-field-title a:active,
+.page-actualites .region-content .views-field-title a:hover,
+.page-actualites .region-content .views-field-title a:active {
 	color: #00aeef;
 	text-decoration: none;
 }
@@ -192,14 +225,24 @@ h1.page-header {
 #block-views-discussions-block .views-field-field-post-tag a,
 #block-views-discussions-block .views-field-field-post-category a,
 .view-discussions .views-field-field-post-tag a,
-.view-discussions .views-field-field-post-category a {
+.view-discussions .views-field-field-post-category a,
+.page-actualites .region-content .views-field-field-post-tag a,
+.page-actualites .region-content .views-field-field-post-category a {
 	color: #428BCA;
 }
 
 #block-views-discussions-block .views-field-field-post-tag a:hover,
+#block-views-discussions-block .views-field-field-post-tag a:active,
 #block-views-discussions-block .views-field-field-post-category a:hover,
+#block-views-discussions-block .views-field-field-post-category a:active,
 .view-discussions .views-field-field-post-tag a:hover,
-.view-discussions .views-field-field-post-category a:hover {
+.view-discussions .views-field-field-post-tag a:active,
+.view-discussions .views-field-field-post-category a:hover,
+.view-discussions .views-field-field-post-category a:active,
+.page-actualites .region-content .views-field-field-post-tag a:hover,
+.page-actualites .region-content .views-field-field-post-tag a:active,
+.page-actualites .region-content .views-field-field-post-category a:hover,
+.page-actualites .region-content .views-field-field-post-category a:active {
 	color: #00aeef;
 	text-decoration: none;
 }
@@ -213,7 +256,12 @@ h1.page-header {
 .view-discussions .views-field-field-post-tag,
 .view-discussions .views-field-field-post-tag div,
 .view-discussions .views-field-field-post-category,
-.view-discussions .views-field-field-post-category div {
+.view-discussions .views-field-field-post-category div,
+.page-actualites .region-content .views-field-created,
+.page-actualites .region-content .views-field-field-post-tag,
+.page-actualites .region-content .views-field-field-post-tag div,
+.page-actualites .region-content .views-field-field-post-category,
+.page-actualites .region-content .views-field-field-post-category div {
 	display: inline-block;
 	font-size: 11px;
 	color: rgba(0,0,0,0.4);	
@@ -222,14 +270,15 @@ h1.page-header {
 #block-views-discussions-block .views-field-field-post-tag:before,
 #block-views-discussions-block .views-field-field-post-category:before,
 .view-discussions .views-field-field-post-tag:before,
-.view-discussions .views-field-field-post-category:before {
+.view-discussions .views-field-field-post-category:before,
+.page-actualites .region-content .views-field-field-post-tag:before,
+.page-actualites .region-content .views-field-field-post-category:before {
 	content: '- ';
 }
 
 #block-views-discussions-block .more-link {
 	text-align: center;
 	padding-bottom: 40px;
-	border-bottom: 0.1em dotted rgba(0,0,0,0.3);
 	margin-bottom: 10px;
 }
 
@@ -243,13 +292,51 @@ h1.page-header {
 	-webkit-border-radius: 3px;
 	font-weight: bold;
 	font-size: 12px;
+	display: block;
+	width: 96%;
+	margin: 0px auto 0px;
 }
 
-#block-views-discussions-block .more-link a:hover {
+#block-views-discussions-block .more-link a:hover,
+#block-views-discussions-block .more-link a:active {
 	background-color: rgba(0,0,0,0.01);
 	color: rgba(0,0,0,0.4);
 	border: 0.15em solid rgba(0,0,0,0.35);
 	text-decoration: none;
+}
+
+.view-discussions .views-field-sharethis,
+.page-actualites .region-content .views-field-sharethis {
+	float: right;
+	-webkit-opacity: 0;
+	-moz-opacity: 0;
+	opacity: 0;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.page-actualites .region-content .views-row:hover > .views-field-sharethis {
+	-webkit-opacity: 1;
+	-moz-opacity: 1;
+	opacity: 1;
+}
+
+.view-discussions .stButton .st-twitter-counter,
+.view-discussions .stButton .st-facebook-counter,
+.view-discussions .stButton .stFb,
+.view-discussions .stButton .stTwbutton,
+.view-discussions .stButton .stMainServices,
+.page-actualites .region-content .st-twitter-counter,
+.page-actualites .region-content .st-facebook-counter,
+.page-actualites .region-content .stFb,
+.page-actualites .region-content .stTwbutton,
+.page-actualites .region-content .stMainServices {
+	height: 22px !important;
+	position: relative;
+	top: -9px;
 }
 
 /** CALENDAR BLOCK **/
@@ -374,9 +461,6 @@ h1.page-header {
 
 #block-views-undp-formation-block .more-link {
 	text-align: center;
-	padding-bottom: 40px;
-	border-bottom: 0.1em dotted rgba(0,0,0,0.3);
-	margin-bottom: 10px;
 }
 
 #block-views-undp-formation-block .more-link a {
@@ -389,6 +473,9 @@ h1.page-header {
 	-webkit-border-radius: 3px;
 	font-weight: bold;
 	font-size: 12px;
+	display: block;
+	width: 96%;
+	margin: 0px auto 0px;
 }
 
 #block-views-undp-formation-block .more-link a:hover {
