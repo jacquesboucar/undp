@@ -48,4 +48,13 @@ function undp_config_block_view_alter(&$data, $block) {
    if ($block->module == 'on_the_web') {
      unset($data['subject']);
    }
-}		
+}
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function undp_config_views_pre_render(&$view) {
+  if ($view->name == 'discussions' && $view->current_display == 'block') {
+    unset($view->result[0]);
+  }
+}  
