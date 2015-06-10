@@ -87,7 +87,7 @@ function undp_event_node_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_event_calendar_pattern';
-  $strongarm->value = 'evenement/[node:title]';
+  $strongarm->value = 'evenements/[node:title]';
   $export['pathauto_node_event_calendar_pattern'] = $strongarm;
 
   return $export;

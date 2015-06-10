@@ -37,6 +37,6 @@ features[variable][] = node_options_post
 features[variable][] = node_preview_post
 features[variable][] = node_submitted_post
 features[variable][] = pathauto_node_post_pattern
+features_exclude[field_base][body] = body
 features_exclude[taxonomy][category] = category
 features_exclude[taxonomy][tags] = tags
-features_exclude[field_base][body] = body
