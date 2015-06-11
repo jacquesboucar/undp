@@ -166,6 +166,12 @@ function undp_context_context_default_contexts() {
           'region' => 'footer',
           'weight' => '-10',
         ),
+        'undp_config-undp_a_propos' => array(
+          'module' => 'undp_config',
+          'delta' => 'undp_a_propos',
+          'region' => 'footer',
+          'weight' => '-9',
+        ),
       ),
     ),
   );

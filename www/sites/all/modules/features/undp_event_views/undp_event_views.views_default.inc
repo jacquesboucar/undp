@@ -97,9 +97,8 @@ function undp_event_views_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'jcarousel';
-  $handler->display->display_options['style_options']['wrap'] = 'circular';
-  $handler->display->display_options['style_options']['visible'] = '1';
-  $handler->display->display_options['style_options']['responsive'] = 1;
+  $handler->display->display_options['style_options']['wrap'] = '0';
+  $handler->display->display_options['style_options']['visible'] = '2';
   $handler->display->display_options['style_options']['auto'] = '3';
   $handler->display->display_options['style_options']['autoPause'] = 1;
   $handler->display->display_options['style_options']['easing'] = '';
@@ -108,6 +107,28 @@ function undp_event_views_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'event_calendar' => 'event_calendar',
+  );
+  /* Filter criterion: Content: Date -  start date (event_calendar_date) */
+  $handler->display->display_options['filters']['event_calendar_date_value']['id'] = 'event_calendar_date_value';
+  $handler->display->display_options['filters']['event_calendar_date_value']['table'] = 'field_data_event_calendar_date';
+  $handler->display->display_options['filters']['event_calendar_date_value']['field'] = 'event_calendar_date_value';
+  $handler->display->display_options['filters']['event_calendar_date_value']['operator'] = '<=';
+  $handler->display->display_options['filters']['event_calendar_date_value']['default_date'] = 'now + 30 day';
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page_1');
