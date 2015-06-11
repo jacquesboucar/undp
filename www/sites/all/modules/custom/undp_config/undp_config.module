@@ -9,26 +9,34 @@ function undp_config_block_info() {
  	$blocks = array();
  	$blocks['undp_footer_menu'] = array(
      'info' => t('Undp footer menu'),
-    );
-    return $blocks;
+  );
+  $blocks['undp_a_propos'] = array(
+     'info' => t('Undp a propos'),
+  );
+  return $blocks;
 }
 
 /**
  * Implements hook_block_view().
  */
 function undp_config_block_view($delta = '') {
-   switch ($delta) {
-     case 'undp_footer_menu':
-       $block['subject'] = 'Menu';
-       $block['content'] = undp_config_get_content($delta);
-       return $block;
-       break;
-   }
+  $block = array();
+  switch ($delta) {
+    case 'undp_footer_menu':
+      $block['subject'] = 'Menu';
+      $block['content'] = undp_config_get_content($delta);
+      break;
+
+    case 'undp_a_propos':
+      $block['subject'] = 'A propos';
+      $block['content'] = undp_config_get_content($delta);
+      break;
+  }
+  return $block;
 }   
 
 function undp_config_get_content($delta = '') {
   switch ($delta) {
-
     case 'undp_footer_menu':
       //$items = array();
       $accueil = l("Accueil", '<front>');
@@ -37,9 +45,13 @@ function undp_config_get_content($delta = '') {
       $condition = l("Conditions d’utilisation", 'conditions-d’utilisation');
       $items['items'] = array($accueil, $post, $biblio, $condition);
       $content = theme('item_list', $items);
-      return $content;
-      break; 
+      break;
+
+    case 'undp_a_propos':
+      $content = 'Lorem ipsum dolor';
+      break;   
   }
+  return $content;
 }  
 /**
  * Implements hook_block_info().
