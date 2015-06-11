@@ -627,7 +627,7 @@ header#page-header {
 }
 
 .footer #social .twitter {
-	background-image: url('http://undp.local/sites/default/files/Twitter_Logo_Silhouette_128.png');
+	background-image: url('http://undp.local/sites/all/themes/undp/images/Twitter_Logo_Silhouette_128.png');
 	width: 25px;
 	height: 25px;
 	background-size: cover;
@@ -636,7 +636,7 @@ header#page-header {
 }
 
 .footer #social .facebook {
-	background-image: url('http://undp.local/sites/default/files/Facebook_logo_128.png');
+	background-image: url('http://undp.local/sites/all/themes/undp/images/Facebook_logo_128.png');
 	width: 25px;
 	height: 25px;
 	background-size: cover;
@@ -645,7 +645,7 @@ header#page-header {
 }
 
 .footer #social .linkedin {
-	background-image: url('http://undp.local/sites/default/files/Linkedin_logo_128.png');
+	background-image: url('http://undp.local/sites/all/themes/undp/images/Linkedin_logo_128.png');
 	width: 25px;
 	height: 25px;
 	background-size: cover;
