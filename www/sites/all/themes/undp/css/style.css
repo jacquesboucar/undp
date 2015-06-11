@@ -101,6 +101,23 @@ ul.menu.nav.navbar-nav:first-child li.leaf:first-child {
 	display: inline-block;
 }
 
+.navbar-nav > li > a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 20px;
+}
+
+header#page-header {
+	width: 250px;
+	position: relative;
+	left: 890px;
+	top: -47px;
+}
+
+#page-header #block-on-the-web-0 {
+	display: none;
+}
+
 
 /** ACTUALITES BLOCK **/
 
@@ -118,11 +135,23 @@ ul.menu.nav.navbar-nav:first-child li.leaf:first-child {
 	display: none;
 }
 
+#block-views-discussions-block-1 .views-field-field-post-image {
+	float: none;
+	width: 830px;
+	padding: 0px;
+	margin: 0px 0px 10px 0px;
+	height: 300px;
+	overflow: hidden;
+	position: relative;
+}
+
 #block-views-discussions-block-1 .views-field-field-post-image img {
 	max-width: 817px;
 	height: auto;
 	margin-bottom: 20px;
 	max-height: auto;
+	position: absolute;
+	top: -20%;
 }
 
 #block-views-discussions-block .views-row,
@@ -339,6 +368,13 @@ ul.menu.nav.navbar-nav:first-child li.leaf:first-child {
 	top: -9px;
 }
 
+
+/** ACTUALITES FILTRES **/
+
+#block-views-discussions-block-3 .view-display-id-block_3 ul {
+	list-style: none;
+}
+
 /** CALENDAR BLOCK **/
 
 .view-header {
@@ -511,6 +547,30 @@ ul.menu.nav.navbar-nav:first-child li.leaf:first-child {
 }
 
 
+/** EVENTS **/
+
+.jcarousel-skin-default .jcarousel-container-vertical {
+	padding: 0px;
+}
+
+.jcarousel-skin-default .jcarousel-container-vertical,
+.jcarousel-skin-default .jcarousel-clip-vertical {
+	height: 220px;
+}
+
+.jcarousel-clip {
+	width: 263px !important;
+}
+
+.jcarousel-skin-default .jcarousel-item {
+	width: 263px;
+}
+
+.jcarousel-skin-default .jcarousel-next,
+.jcarousel-skin-default .jcarousel-prev {
+	display: none;
+}
+
 /** FOOTER **/
 
 .footer.container {
@@ -547,10 +607,53 @@ ul.menu.nav.navbar-nav:first-child li.leaf:first-child {
 	text-decoration: underline;
 }
 
-#block-system-powered-by {
+#block-undp-config-undp-a-propos {
 	width: 848px;
 	padding: 30px 20px 0px 20px;
+	color: #fff;
 }
+
+#block-undp-config-undp-a-propos h2 {
+	margin-top: 0px;
+}
+
+#block-system-powered-by {
+	display: none;
+}
+
+.footer #social {
+	display: block;
+	margin-top: 20px;
+}
+
+.footer #social .twitter {
+	background-image: url('http://undp.local/sites/default/files/Twitter_Logo_Silhouette_128.png');
+	width: 25px;
+	height: 25px;
+	background-size: cover;
+	display: inline-block;
+	margin-right: 20px;
+}
+
+.footer #social .facebook {
+	background-image: url('http://undp.local/sites/default/files/Facebook_logo_128.png');
+	width: 25px;
+	height: 25px;
+	background-size: cover;
+	display: inline-block;
+	margin-right: 20px;
+}
+
+.footer #social .linkedin {
+	background-image: url('http://undp.local/sites/default/files/Linkedin_logo_128.png');
+	width: 25px;
+	height: 25px;
+	background-size: cover;
+	display: inline-block;
+}
+
+
+
 
 fieldset.webform-component-fieldset{
     -webkit-border-radius: 0px;

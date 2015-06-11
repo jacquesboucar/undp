@@ -40,15 +40,17 @@ function undp_config_get_content($delta = '') {
     case 'undp_footer_menu':
       //$items = array();
       $accueil = l("Accueil", '<front>');
-      $post = l("Discussions", 'actualites');
+      $post = l("Actualités", 'actualites');
+      $formation = l("Formations", 'formations');
+      $event = l("Evénements", 'evenements');
       $biblio = l("Bibliothèque", 'bibliothèque');
       $condition = l("Conditions d’utilisation", 'conditions-d’utilisation');
-      $items['items'] = array($accueil, $post, $biblio, $condition);
+      $items['items'] = array($accueil, $post, $formation, $event, $biblio, $condition);
       $content = theme('item_list', $items);
       break;
 
     case 'undp_a_propos':
-      $content = 'Lorem ipsum dolor';
+      $content = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a nisl in tellus molestie rutrum. Nullam sed risus venenatis, pretium tellus eu, placerat est. Nunc vel faucibus nulla. Vestibulum ac lacus vel mi ultricies laoreet nec sed mauris. Fusce urna neque, porttitor eget varius sed, maximus eget lectus. Quisque lobortis dolor lacinia ante cursus facilisis. <div id="social"><a href="http://twitter.com" target="_blank" class="twitter"></a><a href="http://facebook.com" target="_blank" class="facebook"></a><a href="http://linkedin.com" target="_blank" class="linkedin"></a></div>';
       break;   
   }
   return $content;
