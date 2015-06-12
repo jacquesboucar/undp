@@ -589,7 +589,7 @@ header#page-header {
 
 .jcarousel-skin-default .jcarousel-container-vertical,
 .jcarousel-skin-default .jcarousel-clip-vertical {
-	height: 220px;
+	height: 270px;
 }
 
 .jcarousel-clip {
@@ -603,6 +603,7 @@ header#page-header {
 .jcarousel-skin-default .jcarousel-item {
 	width: 248px;
 	border: 0px;
+	min-height: 130px;
 }
 
 .jcarousel-skin-default .jcarousel-item .views-field-title,
