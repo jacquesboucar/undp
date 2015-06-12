@@ -6,6 +6,7 @@ dependencies[] = ctools
 dependencies[] = on_the_web
 dependencies[] = search
 dependencies[] = undp_config
+features[context][] = event_layout
 features[context][] = expert_layout
 features[context][] = homepage_layout
 features[context][] = post_layout
