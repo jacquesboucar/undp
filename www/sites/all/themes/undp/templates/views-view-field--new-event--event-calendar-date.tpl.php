@@ -22,7 +22,6 @@
  * the view is modified.
  */
 ?>
-<?php dpm($row); ?>
 <?php 
 $timestamp = strtotime($row->field_event_calendar_date[0]['raw']['value']);
 $ev_month = format_date($timestamp, 'custom', 'F');
