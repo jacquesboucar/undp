@@ -96,6 +96,12 @@ function undp_context_context_default_contexts() {
           'region' => 'sidebar_second',
           'weight' => '-9',
         ),
+        'linkedin_group_posts-linkedin_group_latest_posts' => array(
+          'module' => 'linkedin_group_posts',
+          'delta' => 'linkedin_group_latest_posts',
+          'region' => 'sidebar_second',
+          'weight' => '-8',
+        ),
         'views-discussions-block_1' => array(
           'module' => 'views',
           'delta' => 'discussions-block_1',

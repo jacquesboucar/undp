@@ -156,3 +156,17 @@ function undp_config_update_7013(){
   );
 
 }
+
+/**
+ * Enable linkedin module.
+ */
+function undp_config_update_7014(){
+  module_enable(
+    array(
+      'linkedin',
+      'linkedin_group_posts',
+    ),
+    TRUE
+  );
+
+}
