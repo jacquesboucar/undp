@@ -127,7 +127,6 @@ function undp_formation_node_strongarm() {
   $strongarm->name = 'node_options_formation';
   $strongarm->value = array(
     0 => 'status',
-    1 => 'promote',
   );
   $export['node_options_formation'] = $strongarm;
 

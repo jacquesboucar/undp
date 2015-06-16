@@ -7,15 +7,32 @@
  /** BASICS **/
  
  img {
-	 max-width: 848px;
+	 max-width: 833px;
 	 height: auto;
  }
  
+ .stButton .st-twitter-counter,
+ .stButton .st-facebook-counter,
+ .stButton .st-yahoo-counter,
+ .stButton .st-linkedin-counter {
+	height: 22px !important;
+}
+
+
+/** TITLE **/
+
+.region-sidebar-second h2.block-title {
+	font-size: 27px;
+}
+
+.page-actualites h1.page-header {
+	width: 1140px;
+}
  
  /** NAVIGUATION BAR **/
 
 .navbar.container {
-	max-width: 1170px !important;
+	width: 1140px !important;
 }
 
 div.navbar-collapse.collapse {
@@ -110,7 +127,7 @@ ul.menu.nav.navbar-nav:first-child li.leaf:first-child {
 header#page-header {
 	width: 250px;
 	position: relative;
-	left: 890px;
+	left: 870px;
 	top: -47px;
 }
 
@@ -119,7 +136,7 @@ header#page-header {
 }
 
 
-/** ACTUALITES BLOCK **/
+/** ACTUALITES BLOCK & PAGE **/
 
 #block-views-discussions-block-1 h2.block-title,
 .page-actualites h1.page-header {
@@ -129,6 +146,12 @@ header#page-header {
 	margin-bottom: 30px;
 	border-bottom: none;
 	font-size: 30px;
+}
+
+.page-actualites .region-sidebar-second {
+	position: relative;
+	top: 85px;
+	padding-right: 15px;
 }
 
 #block-views-discussions-block-1 h2.block-title {
@@ -437,6 +460,7 @@ header#page-header {
 	padding: 0px 15px;
 	display: inline-block;
 	width: 279px;
+	vertical-align:top;
 }
 
 .view-undp-formation .views-row{
@@ -445,6 +469,7 @@ header#page-header {
 	padding: 0px 15px;
 	display: inline-block;
 	width: 282px;
+	vertical-align: top;
 }
 
 #block-views-undp-formation-block .views-field-field-formation-image,
@@ -453,8 +478,8 @@ header#page-header {
 }
 
 #block-views-undp-formation-block .views-field-field-formation-image img {
-	width: 249px;
-	height: auto;
+	width: auto;
+	min-height: 166px;
 	max-height: 166px;
 }
 
@@ -559,10 +584,6 @@ header#page-header {
 
 /** EVENTS **/
 
-#block-views-new-event-block h2.block-title {
-	font-size: 27px;
-}
-
 .page-evenements h1.page-header {
 	background:#00aeef;
 	color: #fff;
@@ -580,7 +601,7 @@ header#page-header {
 
 .page-evenements #block-system-main {
 	padding-left: 15px;
-	width: 848px;
+	width: 833px;
 }
 
 .jcarousel-skin-default .jcarousel-container-vertical {
@@ -695,6 +716,130 @@ header#page-header {
 	text-decoration: none;
 }
 
+.node-event-calendar .content {
+	position: relative;
+}
+
+.node-event-calendar .field-name-event-calendar-date,
+.node-event-calendar .field-name-body,
+.node-event-calendar .field-name-field-event-location-geo,
+.node-event-calendar .field-name-field-event-adress {
+	width: 833px;
+}
+
+.node-event-calendar .field-name-event-calendar-date {
+	margin: 30px 0px 5px;
+	border-top: 1px solid rgba(0,0,0,0.1);
+	padding: 10px 0px 0px;
+}
+
+.node-event-calendar .field-name-field-event-adress {
+	margin-bottom: 10px;
+}
+
+.node-event-calendar .sharethis-buttons {
+	height: 45px;
+	padding: 10px 0px;
+	border-top: 1px solid rgba(0,0,0,0.1);
+	margin: 30px 0px 0px;
+	width: 833px;
+}
+
+.node-event-calendar .sharethis-buttons .sharethis-wrapper:before {
+	content:'Partager cet événement :';
+	color: rgba(0,0,0,0.5);
+	padding-right: 5px;
+	position: relative;
+	top: 1px;
+}
+
+.node-event-calendar .field-name-field-event-image {
+	height: 300px;
+	overflow: hidden;
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.node-event-calendar .field-name-field-event-image img {
+	height: auto;
+	position: absolute;
+	top: -20%;
+}
+
+.node-event-calendar .field-name-field-event-adress .field-items .field-item div,
+.node-event-calendar .field-name-field-event-adress .field-items .field-item span {
+	float:left;
+}
+
+.node-event-calendar .field-name-field-event-adress .field-items .field-item .addressfield-container-inline:before,
+.node-event-calendar .field-name-field-event-adress .field-items .field-item .street-block:before {
+	content:'-';
+	padding: 0px 5px;
+}
+
+.node-event-calendar .field-name-field-event-location-geo .field-items {
+	height: 342px;
+	overflow: hidden;
+}
+
+.node-event-calendar .flag-outer a {
+	color: #428BCA;
+	border: 0.1em solid #428BCA;
+	padding: 6px;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	font-size: 12px;
+	display: block;
+	width: 263px;
+	text-align: center;
+}
+
+.node-event-calendar .flag-outer a:hover,
+.node-event-calendat .flag-outer a:active {
+	color: #00aeef;
+	border: 0.1em solid #00aeef;
+	padding: 6px;
+	text-decoration: none;
+}
+
+.node-event-calendar .flag-outer a.unflag-action {
+	color: #fff;
+	border: 0.1em solid #428BCA;
+	background: #428BCA;
+}
+
+.flag-waiting .flag-throbber {
+	float: right;
+	position: relative;
+	top: -24px;
+	left: -10px;
+	display: none;
+}
+
+.node-event-calendar .flag-outer-attend {
+	position: absolute;
+	top:0px;
+	right: 0px;
+}
+
+.node-event-calendar .flag-outer-like {
+	position: absolute;
+	top:40px;
+	right: 0px;
+}
+
+.node-event-calendar .flag-outer-like .flag-message {
+	display: none !important;
+}
+
+.node-event-calendar .flag-outer-recommend {
+	position: absolute;
+	top:80px;
+	right: 0px;
+}
+
+
 
 
 /** FOOTER **/
@@ -734,7 +879,7 @@ header#page-header {
 }
 
 #block-undp-config-undp-a-propos {
-	width: 848px;
+	width: 833px;
 	padding: 30px 20px 0px 20px;
 	color: #fff;
 }
@@ -778,6 +923,56 @@ header#page-header {
 	display: inline-block;
 }
 
+
+/** COMMENTS **/
+
+
+.comment-wrapper h2.title.comment-form {
+	background-color: rgba(0, 173, 239, 0.1);
+	padding: 20px;
+	margin-bottom: 0px;
+}
+
+.comment-wrapper form#comment-form {
+	background-color: rgba(0, 173, 239, 0.1);
+	padding: 20px;
+}
+
+#edit-comment-body-und-0-format {
+	display: none;
+}
+
+div.comment div.content {
+	display: inline-block;
+	width:87%;
+}
+
+div.comment ul.links {
+	display: inline-block;
+}
+
+div.comment ul.links li {
+	padding-right: 5px;
+	padding-left: 0px;
+}
+
+div.comment ul.links li a {
+	color: #428BCA;
+	border: 0.1em solid #428BCA;
+	padding: 6px;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	font-size: 12px;
+}
+
+div.comment ul.links li a:hover,
+div.comment ul.links li a:active {
+	color: #00aeef;
+	border: 0.1em solid #00aeef;
+	padding: 6px;
+	text-decoration: none;
+}
 
 
 

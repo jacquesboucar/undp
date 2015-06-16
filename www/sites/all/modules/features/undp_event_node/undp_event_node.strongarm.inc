@@ -58,25 +58,25 @@ function undp_event_node_strongarm() {
       'display' => array(
         'flag_recommend' => array(
           'default' => array(
-            'weight' => '8',
+            'weight' => '7',
             'visible' => TRUE,
           ),
         ),
         'flag_like' => array(
           'default' => array(
-            'weight' => '7',
+            'weight' => '6',
             'visible' => TRUE,
           ),
         ),
         'flag_attend' => array(
           'default' => array(
-            'weight' => '6',
+            'weight' => '5',
             'visible' => TRUE,
           ),
         ),
         'sharethis' => array(
           'default' => array(
-            'weight' => '5',
+            'weight' => '8',
             'visible' => TRUE,
           ),
         ),
