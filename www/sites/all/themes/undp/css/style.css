@@ -395,6 +395,39 @@ header#page-header {
 	top: -9px;
 }
 
+.node-post .field-name-field-post-image {
+	height: 300px;
+	overflow: hidden;
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.node-post .field-name-field-post-image img {
+	height: auto;
+	position: absolute;
+	top: -20%;
+}
+
+.node-post .sharethis-buttons {
+	height: 45px;
+	padding: 10px 0px;
+	border-top: 1px solid rgba(0,0,0,0.1);
+	margin: 30px 0px 0px;
+	width: 833px;
+}
+
+.node-post .sharethis-buttons .sharethis-wrapper:before {
+	content:'Partager cet événement :';
+	color: rgba(0,0,0,0.5);
+	padding-right: 5px;
+	position: relative;
+	top: 1px;
+}
+
+.node-post ul.links {
+	display: none;
+}
+
 
 /** ACTUALITES FILTRES **/
 
@@ -472,15 +505,21 @@ header#page-header {
 	vertical-align: top;
 }
 
-#block-views-undp-formation-block .views-field-field-formation-image,
-.view-undp-formation .views-field-field-formation-image {
-	margin-bottom: 20px;
+.views-field.views-field-field-formation-video,
+.views-field.views-field-field-formation-image {
+	max-height: 166px;
+	overflow: hidden;
 }
 
-#block-views-undp-formation-block .views-field-field-formation-image img {
-	width: auto;
-	min-height: 166px;
-	max-height: 166px;
+.views-field.views-field-field-formation-video .field-content img,
+.views-field.views-field-field-formation-image .field-content img {
+	width: 249px;
+	height: auto;
+}
+
+#block-views-undp-formation-block .views-field.views-field-title,
+.view-undp-formation .views-field.views-field-title {
+	margin-top: 20px;
 }
 
 .view-undp-formation .views-field-field-formation-image img {
@@ -926,6 +965,10 @@ header#page-header {
 
 /** COMMENTS **/
 
+#comments .comment h3,
+#comments .comment .sumitted a.permalink {
+	display: none;
+}
 
 .comment-wrapper h2.title.comment-form {
 	background-color: rgba(0, 173, 239, 0.1);
