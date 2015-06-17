@@ -71,4 +71,18 @@ function undp_config_views_pre_render(&$view) {
   if ($view->name == 'discussions' && $view->current_display == 'block') {
     unset($view->result[0]);
   }
+  if ($view->name == 'undp_formation') {
+    foreach ($view->result as $result) {
+      if (!empty($result->field_field_formation_image)) {
+        unset($result->field_field_formation_video);
+      }
+    }
+  }
+} 
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function undp_config_form_comment_form_alter(&$form, &$form_state) {
+  unset($form['subject']);
 }  
