@@ -3,8 +3,58 @@
  * remove this comment and start adding your styles to this file.
  */
  
+ /** FONT **/
+ 
+ @font-face {
+    font-family: Aller;
+    src: url('../font/Aller_Std_Lt.ttf');
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: Aller;
+    src: url('../font/Aller_Std_LtIt.ttf');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Aller;
+    src: url('../font/Aller_Std_Rg.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Aller;
+    src: url('../font/Aller_Std_It.ttf');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Aller;
+    src: url('../font/Aller_Std_Bd.ttf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Aller;
+    src: url('../font/Aller_Std_BdIt.ttf');
+    font-weight: bold;
+	font-style: italic;
+}
+ 
  
  /** BASICS **/
+ 
+ body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	 font-family: Aller;
+ }
+ 
+ p {
+	 font-weight: 200;
+	 line-height: 1.7em;
+ }
  
  img {
 	 max-width: 833px;
@@ -17,6 +67,8 @@
  .stButton .st-linkedin-counter {
 	height: 22px !important;
 }
+
+
 
 
 /** TITLE **/
@@ -197,7 +249,7 @@ header#page-header {
 	margin-bottom: 40px;
 }
 
-#block-views-discussions-block .views-field-title,
+/*#block-views-discussions-block .views-field-title,
 #block-views-discussions-block .views-field-created,
 #block-views-discussions-block .views-field-field-post-category,
 #block-views-discussions-block .views-field-field-post-tag,
@@ -212,8 +264,8 @@ header#page-header {
 .page-actualites .region-content .views-field-field-post-category,
 .page-actualites .region-content .views-field-field-post-tag,
 .page-actualites .region-content .views-field-body {
-	margin-bottom: -2px;
-}
+	display: inline;
+}*/
 
 #block-views-discussions-block .views-field-field-post-image,
 .view-discussions .views-field-field-post-image,
@@ -238,13 +290,14 @@ header#page-header {
 .page-actualites .region-content .views-field-view-node a {
 	color: #428BCA;
 	border: 0.1em solid #428BCA;
-	padding: 6px;
+	padding: 6px 8px;
 	position: relative;
 	top: 11px;
 	border-radius: 3px;
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
 	font-size: 12px;
+	font-weight: 400;
 }
 
 #block-views-discussions-block .views-field-view-node a:hover,
@@ -255,7 +308,7 @@ header#page-header {
 .page-actualites .region-content .views-field-view-node a:active {
 	color: #00aeef;
 	border: 0.1em solid #00aeef;
-	padding: 6px;
+	padding: 6px 8px;
 	position: relative;
 	top: 11px;
 	text-decoration: none;
@@ -319,8 +372,13 @@ header#page-header {
 .page-actualites .region-content .views-field-field-post-category,
 .page-actualites .region-content .views-field-field-post-category div {
 	display: inline-block;
-	font-size: 11px;
+	font-size: 12px;
+	font-weight: 200;
 	color: rgba(0,0,0,0.4);	
+}
+
+.views-field.views-field-title {
+	margin-right: 10px;
 }
 
 #block-views-discussions-block .views-field-field-post-tag:before,
@@ -395,6 +453,31 @@ header#page-header {
 	top: -9px;
 }
 
+.node-type-post h1.page-header,
+.node-type-post .tabs--primary.nav.nav-tabs,
+.node-post {
+	width: 833px;
+}
+
+.node-post .field-name-body {
+	margin-bottom: 20px;
+}
+
+.node-post .field-name-field-post-category div,
+.node-post .field-name-field-post-tag div {
+	display: inline-block;
+}
+
+.node-post .field-name-field-post-category .field-items:after,
+.node-post .field-name-field-post-tag .field-items:after {
+	content: ', ';
+}
+
+.node-post .field-name-field-post-category .field-items:last-child:after,
+.node-post .field-name-field-post-tag .field-items:last-child:after {
+	content: '';
+}
+
 .node-post .field-name-field-post-image {
 	height: 300px;
 	overflow: hidden;
@@ -412,7 +495,7 @@ header#page-header {
 	height: 45px;
 	padding: 10px 0px;
 	border-top: 1px solid rgba(0,0,0,0.1);
-	margin: 30px 0px 0px;
+	margin: 10px 0px 0px;
 	width: 833px;
 }
 
@@ -457,7 +540,7 @@ header#page-header {
 
 .month.mini-day-on a {
 	color: #428BCA;
-	font-weight: bold;
+	font-weight: 600;
 	text-decoration: none;
 	display: block;
 }
@@ -536,20 +619,21 @@ header#page-header {
 .view-undp-formation .views-field-view-node a {
 	color: #428BCA;
 	border: 0.1em solid #428BCA;
-	padding: 6px;
+	padding: 6px 8px;
 	position: relative;
 	top: 13px;
 	border-radius: 3px;
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
 	font-size: 12px;
+	font-weight: 400;
 }
 
 #block-views-undp-formation-block .views-field-view-node a:hover,
 .view-undp-formation .views-field-view-node a:hover {
 	color: #00aeef;
 	border: 0.1em solid #00aeef;
-	padding: 6px;
+	padding: 6px 8px;
 	position: relative;
 	top: 13px;
 	text-decoration: none;
@@ -714,7 +798,7 @@ header#page-header {
 	margin-right: 20px;
 	text-align: center;
 	border: 1px solid rgba(0,0,0,0.1);
-	margin-bottom: 40px;
+	margin-bottom: 60px;
 }
 
 .upcoming-date .month {
@@ -965,8 +1049,16 @@ header#page-header {
 
 /** COMMENTS **/
 
+#comments {
+	width: 833px;
+}
+
+#comments span.new {
+	display: none;
+}
+
 #comments .comment h3,
-#comments .comment .sumitted a.permalink {
+#comments .submitted a.permalink {
 	display: none;
 }
 
@@ -987,7 +1079,11 @@ header#page-header {
 
 div.comment div.content {
 	display: inline-block;
-	width:87%;
+	width:672px;
+}
+
+.not-logged-in div.comment div.content {
+	width:580px;
 }
 
 div.comment ul.links {
@@ -1002,18 +1098,19 @@ div.comment ul.links li {
 div.comment ul.links li a {
 	color: #428BCA;
 	border: 0.1em solid #428BCA;
-	padding: 6px;
+	padding: 6px 8px;
 	border-radius: 3px;
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
 	font-size: 12px;
+	font-weight:400;
 }
 
 div.comment ul.links li a:hover,
 div.comment ul.links li a:active {
 	color: #00aeef;
 	border: 0.1em solid #00aeef;
-	padding: 6px;
+	padding: 6px 8px;
 	text-decoration: none;
 }
 

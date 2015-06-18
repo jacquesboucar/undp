@@ -78,7 +78,7 @@ function undp_post_node_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_post_category',
-    'label' => 'Catégorie',
+    'label' => 'Catégories',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -168,7 +168,7 @@ function undp_post_node_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_post_tag',
-    'label' => 'Tag',
+    'label' => 'Mots clés',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -187,10 +187,10 @@ function undp_post_node_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Catégorie');
+  t('Catégories');
   t('Contenu');
   t('Image');
-  t('Tag');
+  t('Mots clés');
 
   return $field_instances;
 }

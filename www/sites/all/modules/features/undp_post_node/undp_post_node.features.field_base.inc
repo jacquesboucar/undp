@@ -13,7 +13,7 @@ function undp_post_node_field_default_field_bases() {
   // Exported field_base: 'field_post_category'
   $field_bases['field_post_category'] = array(
     'active' => 1,
-    'cardinality' => 1,
+    'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_post_category',
@@ -61,7 +61,7 @@ function undp_post_node_field_default_field_bases() {
   // Exported field_base: 'field_post_tag'
   $field_bases['field_post_tag'] = array(
     'active' => 1,
-    'cardinality' => 1,
+    'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_post_tag',

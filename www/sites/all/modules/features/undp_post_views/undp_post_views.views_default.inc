@@ -59,7 +59,7 @@ function undp_post_views_views_default_views() {
   $handler->display->display_options['fields']['created']['date_format'] = 'post';
   $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
   $handler->display->display_options['fields']['created']['link_to_entity'] = 0;
-  /* Field: Indexed Node: Catégorie */
+  /* Field: Indexed Node: Catégories */
   $handler->display->display_options['fields']['field_post_category']['id'] = 'field_post_category';
   $handler->display->display_options['fields']['field_post_category']['table'] = 'search_api_index_post_index';
   $handler->display->display_options['fields']['field_post_category']['field'] = 'field_post_category';
@@ -67,7 +67,7 @@ function undp_post_views_views_default_views() {
   $handler->display->display_options['fields']['field_post_category']['link_to_entity'] = 1;
   $handler->display->display_options['fields']['field_post_category']['view_mode'] = 'full';
   $handler->display->display_options['fields']['field_post_category']['bypass_access'] = 0;
-  /* Field: Indexed Node: Tag */
+  /* Field: Indexed Node: Mots clés */
   $handler->display->display_options['fields']['field_post_tag']['id'] = 'field_post_tag';
   $handler->display->display_options['fields']['field_post_tag']['table'] = 'search_api_index_post_index';
   $handler->display->display_options['fields']['field_post_tag']['field'] = 'field_post_tag';
@@ -157,24 +157,6 @@ function undp_post_views_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Post date */
-  $handler->display->display_options['fields']['created']['id'] = 'created';
-  $handler->display->display_options['fields']['created']['table'] = 'node';
-  $handler->display->display_options['fields']['created']['field'] = 'created';
-  $handler->display->display_options['fields']['created']['label'] = 'Publié le ';
-  $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['created']['date_format'] = 'post';
-  $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
-  /* Field: Content: Catégorie */
-  $handler->display->display_options['fields']['field_post_category']['id'] = 'field_post_category';
-  $handler->display->display_options['fields']['field_post_category']['table'] = 'field_data_field_post_category';
-  $handler->display->display_options['fields']['field_post_category']['field'] = 'field_post_category';
-  $handler->display->display_options['fields']['field_post_category']['label'] = 'Catégories ';
-  /* Field: Content: Tag */
-  $handler->display->display_options['fields']['field_post_tag']['id'] = 'field_post_tag';
-  $handler->display->display_options['fields']['field_post_tag']['table'] = 'field_data_field_post_tag';
-  $handler->display->display_options['fields']['field_post_tag']['field'] = 'field_post_tag';
-  $handler->display->display_options['fields']['field_post_tag']['label'] = 'Tags ';
   /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
@@ -280,24 +262,6 @@ function undp_post_views_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Post date */
-  $handler->display->display_options['fields']['created']['id'] = 'created';
-  $handler->display->display_options['fields']['created']['table'] = 'node';
-  $handler->display->display_options['fields']['created']['field'] = 'created';
-  $handler->display->display_options['fields']['created']['label'] = 'Publié le ';
-  $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['created']['date_format'] = 'post';
-  $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
-  /* Field: Content: Catégorie */
-  $handler->display->display_options['fields']['field_post_category']['id'] = 'field_post_category';
-  $handler->display->display_options['fields']['field_post_category']['table'] = 'field_data_field_post_category';
-  $handler->display->display_options['fields']['field_post_category']['field'] = 'field_post_category';
-  $handler->display->display_options['fields']['field_post_category']['label'] = 'Catégories ';
-  /* Field: Content: Tag */
-  $handler->display->display_options['fields']['field_post_tag']['id'] = 'field_post_tag';
-  $handler->display->display_options['fields']['field_post_tag']['table'] = 'field_data_field_post_tag';
-  $handler->display->display_options['fields']['field_post_tag']['field'] = 'field_post_tag';
-  $handler->display->display_options['fields']['field_post_tag']['label'] = 'Tags ';
   /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
