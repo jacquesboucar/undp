@@ -170,3 +170,28 @@ function undp_config_update_7014(){
   );
 
 }
+
+/**
+ * Activate locale and Add french language and set it as default
+ */
+function undp_config_update_7015() {
+  module_enable(
+    array(
+      'locale',
+      ),
+    TRUE
+    );
+  include_once './includes/locale.inc';
+  locale_add_language('fr', 'French', 'Français', LANGUAGE_LTR, '', '', TRUE, TRUE);
+}
+/**
+ * Enable l10n_update
+ */
+function undp_config_update_7016() {
+  module_enable(
+    array(
+      'l10n_update',
+      ),
+    TRUE
+    );
+}
