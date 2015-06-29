@@ -185,3 +185,15 @@ function undp_config_update_7016() {
   include_once './includes/locale.inc';
   locale_add_language('fr', 'French', 'Français', LANGUAGE_LTR, '', '', TRUE, TRUE);
 }
+
+/**
+ * Twitter settings
+ */
+function undp_config_update_7017() {
+  module_enable(
+    array(
+      'undp_twitter_views',
+      ),
+    TRUE
+    );
+}  

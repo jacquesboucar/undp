@@ -96,11 +96,11 @@ function undp_context_context_default_contexts() {
           'region' => 'sidebar_second',
           'weight' => '-9',
         ),
-        'linkedin_group_posts-linkedin_group_latest_posts' => array(
-          'module' => 'linkedin_group_posts',
-          'delta' => 'linkedin_group_latest_posts',
+        'views-undp_tweets-block' => array(
+          'module' => 'views',
+          'delta' => 'undp_tweets-block',
           'region' => 'sidebar_second',
-          'weight' => '-8',
+          'weight' => '-7',
         ),
         'views-discussions-block_1' => array(
           'module' => 'views',
