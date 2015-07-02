@@ -196,4 +196,16 @@ function undp_config_update_7017() {
       ),
     TRUE
     );
+}
+
+/**
+ * Contact module
+ */
+function undp_config_update_7018() {
+  module_enable(
+    array(
+      'contact',
+      ),
+    TRUE
+    );
 }  

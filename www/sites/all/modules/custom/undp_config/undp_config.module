@@ -45,7 +45,8 @@ function undp_config_get_content($delta = '') {
       $event = l("Evénements", 'evenements');
       $biblio = l("Bibliothèque", 'bibliothèque');
       $condition = l("Conditions d’utilisation", 'conditions-d’utilisation');
-      $items['items'] = array($accueil, $post, $formation, $event, $biblio, $condition);
+      $contact = l('Contact', 'contact');
+      $items['items'] = array($accueil, $post, $formation, $event, $biblio, $condition, $contact);
       $content = theme('item_list', $items);
       break;
 
@@ -85,4 +86,10 @@ function undp_config_views_pre_render(&$view) {
  */
 function undp_config_form_comment_form_alter(&$form, &$form_state) {
   unset($form['subject']);
-}  
+}
+
+function undp_config_form_contact_site_form_alter(&$form, &$form_state) {
+  unset($form['copy']);
+  $form['mail']['#default_value'] = '';
+  $form['name']['#default_value'] = '';
+}
