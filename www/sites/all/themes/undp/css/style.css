@@ -43,9 +43,39 @@
     font-weight: bold;
 	font-style: italic;
 }
+
+@font-face {
+    font-family: Corbel;
+    src: url('../font/Corbel.ttf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Corbel;
+    src: url('../font/Corbel_Bold.ttf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Corbel;
+    src: url('../font/Corbel_Italic.ttf');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Corbel;
+    src: url('../font/Corbel_Bold_Italic.ttf');
+    font-weight: bold;
+    font-style: italic;
+}
  
  
  /** BASICS **/
+ 
+ body {
+	 background-color: #fdf2e1;
+ }
  
  body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	 font-family: Aller;
@@ -53,7 +83,8 @@
  
  p {
 	 font-weight: 200;
-	 line-height: 1.7em;
+	 line-height: 1.5em;
+	 font-size: 15px;
  }
  
  img {
@@ -74,7 +105,7 @@
 /** TITLE **/
 
 .region-sidebar-second h2.block-title {
-	font-size: 27px;
+	font-size: 25px;
 }
 
 .page-actualites h1.page-header {
@@ -83,16 +114,18 @@
  
  /** NAVIGUATION BAR **/
 
-.navbar.container {
-	width: 1140px !important;
-}
-
 div.navbar-collapse.collapse {
-	background-color: #fff;
 	border: none;
 	min-height: 160px;
 	max-height: 160px;
-	padding: 15px 0px 0px;
+	padding: 0px;
+}
+
+header .navbar.container {
+	max-width: 1150px !important;
+	width: 1150px;
+	margin: 0px auto;
+	padding: 0px;
 }
 
 .navbar {
@@ -112,11 +145,11 @@ div.navbar-collapse.collapse {
 }
 
 ul.menu.nav.navbar-nav:first-child li:first-child a {
-	background-image: url('../images/logo.png');
+	background-image: url('../images/logo-.png');
 	background-size: cover;
-	background-color: #fff;
-	height: 140px;
-	width: 232px;
+	background-color: transparent;
+	height: 78px;
+	width: 300px;
 	font-size: 0px;
 	display: inline-block;
 	margin: 0 auto;
@@ -124,9 +157,9 @@ ul.menu.nav.navbar-nav:first-child li:first-child a {
 }
 
 header#navbar{
-    color: #ffffff;
-    overflow: auto;
     min-height: 50px;
+	width: 100%;
+	background-color: rgba(255,255,255,0.6);
 }
 
 header .navbar.container{
@@ -152,28 +185,27 @@ ul.menu.nav.navbar-nav:first-child li.leaf:first-child {
 }
 .menu.nav.navbar-nav:first-child li.leaf {
 	position: relative;
-	top: 95px;
-	margin-right: 10px;
+	top: 30px;
+	margin-top: 30px;
 }
 
 .menu.nav.navbar-nav:first-child li a {
-	background: #00aeef;
-	color: #fff;
+	color: #404041;
+	font-size: 16px;
+	font-weight: normal;
 }
 
-.menu.nav.navbar-nav:first-child li a:hover {
+/*.menu.nav.navbar-nav:first-child li a:hover {
 	background:#3fcaff;
 	color: #fff;
-}
+}*/
 
 .nav li {
 	display: inline-block;
 }
 
 .navbar-nav > li > a {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    line-height: 20px;
+    padding: 0px 30px 0px 0px;
 }
 
 header#page-header {
@@ -187,14 +219,28 @@ header#page-header {
 	display: none;
 }
 
+#search-block-form--2 {
+	display: none;
+}
+
+/** BODY **/
+
+.container {
+	width: 1120px;
+	padding: 60px 0px 0px;
+}
+
+.col-sm-9 {
+	width: 715px;
+	padding: 0px;
+}
+
 
 /** ACTUALITES BLOCK & PAGE **/
 
 #block-views-discussions-block-1 h2.block-title,
 .page-actualites h1.page-header {
-	background:#00aeef;
-	color: #fff;
-	padding: 12px 15px;
+	color: #404041;
 	margin-bottom: 30px;
 	border-bottom: none;
 	font-size: 30px;
@@ -206,31 +252,27 @@ header#page-header {
 	padding-right: 15px;
 }
 
-#block-views-discussions-block-1 h2.block-title {
-	width: 1140px;
-}
-
 #block-views-discussions-block h2.block-title {
 	display: none;
 }
 
 #block-views-discussions-block-1 .views-field-field-post-image {
 	float: none;
-	width: 830px;
+	width: 715px;
 	padding: 0px;
-	margin: 0px 0px 10px 0px;
-	height: 300px;
+	height: 375px;
 	overflow: hidden;
 	position: relative;
+	left: -30px;
+	top: -30px;
 }
 
 #block-views-discussions-block-1 .views-field-field-post-image img {
-	max-width: 817px;
+	max-width: 715px;
 	height: auto;
-	margin-bottom: 20px;
 	max-height: auto;
 	position: absolute;
-	top: -20%;
+	top: -10%;
 }
 
 #block-views-discussions-block .views-row,
@@ -238,11 +280,15 @@ header#page-header {
 .page-actualites .region-content .views-row {
 	margin-bottom: 40px;
 	min-height: 147px;
-	padding: 0px 15px;
+	padding: 30px;
+	background: #fff;
 }
 
 #block-views-discussions-block-1 .views-row {
 	margin-bottom: 50px;
+	width: 715px;
+	padding: 30px;
+	background: #FFF none repeat scroll 0% 0%;
 }
 
 #block-views-discussions-block .views-row:last-child {
@@ -270,8 +316,11 @@ header#page-header {
 #block-views-discussions-block .views-field-field-post-image,
 .view-discussions .views-field-field-post-image,
 .page-actualites .region-content .views-field-field-post-image {
-	float: left;
-	margin-right: 30px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 240px;
+	overflow: hidden;
 }
 
 #block-views-discussions-block .views-field-field-post-image a,
@@ -282,22 +331,57 @@ header#page-header {
 
 #block-views-discussions-block .views-field-field-post-image img,
 .page-actualites .region-content .views-field-field-post-image img {
-	max-height: 147px;
+	position: relative;
+	left: -45%;
+	width: 480px;
+	top: -25px;
 }
+
+#block-views-discussions-block .views-field-view-node,
+.view-all-post-view .views-field-view-node,
+#block-views-discussions-block .views-field-title,
+.view-all-post-view .views-field-title,
+#block-views-discussions-block .views-field-body,
+.view-all-post-view .views-field-body,
+#block-views-discussions-block .views-field-created-1,
+.view-all-post-view .views-field-created {
+	margin-left: 240px;
+}
+
+/*#block-views-discussions-block .views-field-body,
+.view-all-post-view .views-field-body {
+	max-height: 44px;
+	overflow: hidden;
+}*/
+
+#block-views-discussions-block .view-discussions .views-row,
+.page-actualites .view-all-post-view .views-row {
+	position: relative;
+	height: auto;
+	overflow: hidden;
+}
+
+/*#block-views-discussions-block .views-field-body,
+.view-discussions .views-field-body {
+	margin-bottom: 37px;
+}*/
 
 #block-views-discussions-block .views-field-view-node a,
 .view-discussions .views-field-view-node a,
 .page-actualites .region-content .views-field-view-node a {
-	color: #428BCA;
-	border: 0.1em solid #428BCA;
-	padding: 6px 8px;
-	position: relative;
-	top: 11px;
-	border-radius: 3px;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	font-size: 12px;
+	color: #FFF;
+	border-radius: 2px;
+	font-size: 13px;
 	font-weight: 400;
+	background-color: #169BD7;
+	text-transform: uppercase;
+	font-family: Corbel;
+	padding-top: 12px;
+	width: 140px;
+	height: 40px;
+	display: block;
+	text-align: center;
+	margin-top: 16px;
 }
 
 #block-views-discussions-block .views-field-view-node a:hover,
@@ -306,11 +390,11 @@ header#page-header {
 .view-discussions .views-field-view-node a:active,
 .page-actualites .region-content .views-field-view-node a:hover,
 .page-actualites .region-content .views-field-view-node a:active {
-	color: #00aeef;
+	/*color: #00aeef;
 	border: 0.1em solid #00aeef;
 	padding: 6px 8px;
 	position: relative;
-	top: 11px;
+	top: 11px;*/
 	text-decoration: none;
 }
 
@@ -318,10 +402,10 @@ header#page-header {
 .view-discussions .views-field-title a,
 .page-actualites .region-content .views-field-title a {
 	font-size: 20px;
-	color: #428BCA;
+	color: #404041;
 }
 
-#block-views-discussions-block .views-field-title a:hover,
+/*#block-views-discussions-block .views-field-title a:hover,
 #block-views-discussions-block .views-field-title a:active,
 .view-discussions .views-field-title a:hover,
 .view-discussions .views-field-title a:active,
@@ -329,7 +413,7 @@ header#page-header {
 .page-actualites .region-content .views-field-title a:active {
 	color: #00aeef;
 	text-decoration: none;
-}
+}*/
 
 #block-views-discussions-block .views-field-field-post-tag a,
 #block-views-discussions-block .views-field-field-post-category a,
@@ -360,35 +444,46 @@ header#page-header {
 #block-views-discussions-block .views-field-field-post-tag,
 #block-views-discussions-block .views-field-field-post-tag div,
 #block-views-discussions-block .views-field-field-post-category,
-#block-views-discussions-block .views-field-field-post-category div,
 .view-discussions .views-field-created,
+.view-discussions .views-field-created-1,
 .view-discussions .views-field-field-post-tag,
 .view-discussions .views-field-field-post-tag div,
 .view-discussions .views-field-field-post-category,
-.view-discussions .views-field-field-post-category div,
 .page-actualites .region-content .views-field-created,
 .page-actualites .region-content .views-field-field-post-tag,
 .page-actualites .region-content .views-field-field-post-tag div,
-.page-actualites .region-content .views-field-field-post-category,
+.page-actualites .region-content .views-field-field-post-category {
+	display: inline-block;
+	font-size: 15px;
+	font-weight: 200;
+	color: #8d8d8d;
+	position: relative;
+	top: -6px;
+	margin-bottom: 6px;
+}
+
+#block-views-discussions-block .views-field-field-post-category div,
+.view-discussions .views-field-field-post-category div,
 .page-actualites .region-content .views-field-field-post-category div {
 	display: inline-block;
-	font-size: 12px;
+	font-size: 15px;
 	font-weight: 200;
-	color: rgba(0,0,0,0.4);	
+	color: #8d8d8d;
 }
 
 .views-field.views-field-title {
-	margin-right: 10px;
+	position: relative;
+	top: -6px;
 }
 
-#block-views-discussions-block .views-field-field-post-tag:before,
+/*#block-views-discussions-block .views-field-field-post-tag:before,
 #block-views-discussions-block .views-field-field-post-category:before,
 .view-discussions .views-field-field-post-tag:before,
 .view-discussions .views-field-field-post-category:before,
 .page-actualites .region-content .views-field-field-post-tag:before,
 .page-actualites .region-content .views-field-field-post-category:before {
 	content: '- ';
-}
+}*/
 
 #block-views-discussions-block .more-link {
 	text-align: center;
@@ -430,6 +525,21 @@ header#page-header {
 	-ms-transition: all 0.3s ease;
 	-o-transition: all 0.3s ease;
 	transition: all 0.3s ease;
+	position: absolute;
+	right: 26px;
+	bottom: 22px;
+}
+
+#block-views-discussions-block-1 .block-title a {
+	font-size: 15px;
+	font-weight: 200;
+	color: #428BCA;
+	margin-left: 10px;
+}
+
+#block-views-discussions-block-1 .more-link a:hover {
+	color: #00aeef;
+	text-decoration: none;
 }
 
 .page-actualites .region-content .views-row:hover > .views-field-sharethis {
