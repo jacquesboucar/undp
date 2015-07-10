@@ -75,6 +75,10 @@
  
  body {
 	 background-color: #fdf2e1;
+	 font-family: aller;
+	 font-size: 15px;
+	 color: #404041;
+	 line-height: 1.5em;
  }
  
  body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -104,13 +108,13 @@
 
 /** TITLE **/
 
-.region-sidebar-second h2.block-title {
+/*.region-sidebar-second h2.block-title {
 	font-size: 25px;
 }
 
 .page-actualites h1.page-header {
 	width: 1140px;
-}
+}*/
  
  /** NAVIGUATION BAR **/
 
@@ -233,6 +237,11 @@ header#page-header {
 .col-sm-9 {
 	width: 715px;
 	padding: 0px;
+}
+
+.col-sm-3 {
+	width: 345px;
+	padding: 0px 0px 0px 30px;
 }
 
 
@@ -634,12 +643,6 @@ header#page-header {
 	display: none;
 }
 
-.front .region-sidebar-second {
-	position: relative;
-	top: 85px;
-	padding-right: 15px;
-}
-
 .month.mini-day-on {
 	background-color: rgba(0,174,239,0.05);
 }
@@ -817,6 +820,53 @@ header#page-header {
 
 /** EVENTS **/
 
+
+.region-sidebar-second #block-views-new-event-block h2.block-title {
+	display: none;
+}
+
+.region-sidebar-second #block-views-calendar-block-1 h2.block-title a {
+  font-size: 15px;
+  font-weight: 200;
+  color: #428BCA;
+  margin-left: 10px;
+  position: absolute;
+  right: 0px;
+  top: 14px;
+}
+
+#block-views-new-event-block {
+	background: #fff;
+	padding: 0px 30px 30px;
+}
+
+#block-views-calendar-block-1 .view-calendar {
+	background: #fff;
+	padding: 30px 30px 30px 10px;
+}
+
+.calendar-calendar {
+	font-size: 15px;
+	font-weight: 200;
+}
+
+.calendar-calendar th.days {
+	border: none;
+	background: none;
+	padding-bottom: 20px;
+	color: #8d8d8d;
+	font-weight: 200;
+	text-align: right;
+}
+
+.calendar-calendar .month {
+	border: none;
+	background: none;
+	margin-bottom: 5px;
+	color: #8d8d8d;
+	font-weight: 200;
+}
+
 .page-evenements h1.page-header {
 	background:#00aeef;
 	color: #fff;
@@ -871,7 +921,10 @@ header#page-header {
 }
 
 #block-views-calendar-block-1 h2 {
-	display: none;
+	color: #404041;
+	margin-bottom: 30px;
+	border-bottom: none;
+	font-size: 30px;
 }
 
 .view-new-event .views-row {
@@ -903,24 +956,30 @@ header#page-header {
 
 .upcoming-date {
 	display: block;
-	width: 60px;
+	width: 80px;
 	float: left;
-	margin-right: 20px;
+	margin: 0px 30px 30px 0px;
 	text-align: center;
-	border: 1px solid rgba(0,0,0,0.1);
-	margin-bottom: 60px;
+	position: relative;
+	top: -1px;
 }
 
 .upcoming-date .month {
 	display: block;
-	background: #00aeef;
+	background: #169bd7;
+	border: 1px solid #169bd7;
 	color: #fff;
+	padding: 3px 0px;
+	position: relative;
+	top: 1px;
 }
 
 .upcoming-date .day {
 	display: block;
-	font-size: 20px;
-	padding: 5px 0px;
+	font-size: 30px;
+	padding: 13px 0px;
+	color: #404041;
+	border: 1px solid #d1d1d1;
 }
 
 .view-new-event .views-field-view-node a {
@@ -1078,9 +1137,16 @@ header#page-header {
 /** FOOTER **/
 
 .footer.container {
-	background-color: rgba(218,178,127,0.8);
-	margin: 45px auto 0px;
+	background-color: rgba(255,255,255,0.6);
+	margin: 0px auto;
 	padding: 0;
+	width: 100%;
+	text-align: center;
+	border-top: 0px;
+}
+
+.footer.container h2 {
+	display: none;
 }
 
 #block-undp-config-undp-footer-menu {
@@ -1088,6 +1154,7 @@ header#page-header {
 	width: 300px;
 	background-color: #cfa97a;
 	padding: 30px 20px;
+	display: none;
 }
 
 #block-undp-config-undp-footer-menu h2 {
@@ -1112,9 +1179,12 @@ header#page-header {
 }
 
 #block-undp-config-undp-a-propos {
-	width: 833px;
-	padding: 30px 20px 0px 20px;
-	color: #fff;
+	width: 1150px;
+	padding: 60px 90px 50px;
+	color: #404041;
+	font-size: 15px;
+	font-weight: 200;
+	margin: 0 auto;
 }
 
 #block-undp-config-undp-a-propos h2 {
