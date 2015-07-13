@@ -256,15 +256,14 @@ function undp_twitter_views_views_default_views() {
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Tweets';
+  $handler->display->display_options['title'] = 'Twitter <a href="https://twitter.com/RRisques" target="_blank">Suivez-nous</a>';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['use_more'] = FALSE;
-  $handler->display->display_options['use_more'] = TRUE;
   $handler->display->display_options['defaults']['link_display'] = FALSE;
   $handler->display->display_options['link_display'] = 'page_2';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '3';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'list';
@@ -279,6 +278,23 @@ function undp_twitter_views_views_default_views() {
   $handler->display->display_options['row_options']['separator'] = ' &#8212; ';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Champ: Twitter : Nom complet */
+  $handler->display->display_options['fields']['name']['id'] = 'name';
+  $handler->display->display_options['fields']['name']['table'] = 'twitter_account';
+  $handler->display->display_options['fields']['name']['field'] = 'name';
+  $handler->display->display_options['fields']['name']['label'] = '';
+  $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
+  /* Champ: Twitter : Suivre */
+  $handler->display->display_options['fields']['follow']['id'] = 'follow';
+  $handler->display->display_options['fields']['follow']['table'] = 'twitter';
+  $handler->display->display_options['fields']['follow']['field'] = 'follow';
+  $handler->display->display_options['fields']['follow']['label'] = '';
+  $handler->display->display_options['fields']['follow']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['follow']['alter']['text'] = '@RRisques';
+  $handler->display->display_options['fields']['follow']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['follow']['alter']['path'] = 'https://twitter.com/RRisques';
+  $handler->display->display_options['fields']['follow']['alter']['absolute'] = TRUE;
+  $handler->display->display_options['fields']['follow']['element_label_colon'] = FALSE;
   /* Champ: Twitter : Texte du message */
   $handler->display->display_options['fields']['text']['id'] = 'text';
   $handler->display->display_options['fields']['text']['table'] = 'twitter';
@@ -373,6 +389,8 @@ function undp_twitter_views_views_default_views() {
     t('Tout'),
     t('Tweets by @%1'),
     t('Block'),
+    t('Twitter <a href="https://twitter.com/RRisques" target="_blank">Suivez-nous</a>'),
+    t('@RRisques'),
     t('Undp Tweets'),
     t('Displays a formatted list of tweets'),
   );
