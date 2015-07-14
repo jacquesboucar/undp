@@ -1,0 +1,9 @@
+name = undp rules
+core = 7.x
+package = Features
+dependencies[] = entity
+dependencies[] = message_notify
+dependencies[] = rules
+dependencies[] = rules_admin
+features[features_api][] = api:2
+features[rules_config][] = rules_post_notification
