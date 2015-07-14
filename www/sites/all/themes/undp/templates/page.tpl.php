@@ -79,7 +79,15 @@
       <?php if (!empty($site_name)): ?>
 <!--      <a class="name navbar-brand" href="--><?php //print $front_page; ?><!--" title="--><?php //print t('Home'); ?><!--">--><?php //print $site_name; ?><!--</a>-->
       <?php endif; ?>
-        
+       <?php // if ($logo): ?>
+  <div class="logo">
+      <div class="container">
+        <a class="logo col-xs-12 col-sm-5 col-md-5" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
+          <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+        </a>
+      </div>
+    </div>
+  <?php // endif; ?> 
       <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
         <span class="sr-only">Toggle navigation</span>
@@ -107,19 +115,7 @@
         </nav>
       </div>
     <?php endif; ?>
-  </div>
-  <?php // if ($logo): ?>
-  <!--
-	  <div class="logo">
-      <div class="container">
-        <a class="logo col-xs-12 col-sm-5 col-md-5" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
-          <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
-        </a>
-      </div>
-    </div>
-   !-->
-
-  <?php // endif; ?> 
+  </div> 
 </header>
 
 <div class="main-container container">
