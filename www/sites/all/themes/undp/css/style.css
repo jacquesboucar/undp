@@ -258,7 +258,7 @@ header#page-header {
 	display: none;
 }
 
-#search-block-form--2 .input-group .form-control {
+.input-group .form-control {
 	padding: 19px;
 	border: 1px solid #00aeef;
 	border-bottom-left-radius: 15px;
@@ -269,7 +269,7 @@ header#page-header {
 	-webkit-border-top-left-radius: 0px;
 }
 
-#search-block-form--2 .input-group-btn:last-child>.btn {
+.input-group-btn:last-child>.btn {
 	padding: 9px 13px;
 	border: 1px solid #00aeef;
 	color: #fff;
@@ -2198,11 +2198,11 @@ ul.secondary {
 	right: 0px;
 }
 
-#search-block-form--2 .input-group .form-control {
+.input-group .form-control {
 	display: none;
 }
 
-#search-block-form--2 .input-group-btn:last-child>.btn {
+.input-group-btn:last-child>.btn {
 	border-bottom-left-radius: 15px;
 	-moz-border-bottom-left-radius: 15px;
 	-webkit-border-bottom-left-radius: 15px;
@@ -2514,16 +2514,16 @@ ul.secondary {
 	right: 0px;
 }
 
-#search-block-form--2 .input-group {
+.input-group {
 	width: 165px;
 }
 
-#search-block-form--2 .input-group .form-control {
+.input-group .form-control {
 	display: block;
 	width: 165px;
 }
 
-#search-block-form--2 .input-group-btn:last-child>.btn {
+.input-group-btn:last-child>.btn {
 	border-bottom-left-radius: 0px;
 	-moz-border-bottom-left-radius: 0px;
 	-webkit-border-bottom-left-radius: 0px;
