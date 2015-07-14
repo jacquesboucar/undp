@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the message type feature.
+ */
+
+include_once 'message_type.features.inc';
