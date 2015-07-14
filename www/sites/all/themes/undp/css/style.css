@@ -1759,7 +1759,7 @@ div.row {
 
 .region-sidebar-second #block-views-undp-tweets-block .view-undp-tweets .views-field-name {
   height: 80px;
-  background-image: url('http://undp.local/sites/all/themes/undp/images/logo-twitter.png');
+  background-image: url('http://undp.dev.upwelling.net/sites/all/themes/undp/images/logo-twitter.png');
   background-size: contain;
   background-repeat: no-repeat;
   padding: 20px 0px 0px 105px;
@@ -1848,7 +1848,7 @@ div.row {
 }
 
 .footer #social .twitter {
-	background-image: url('http://undp.local/sites/all/themes/undp/images/Twitter_Logo_Silhouette_128.png');
+	background-image: url('http://undp.dev.upwelling.net/sites/all/themes/undp/images/Twitter_Logo_Silhouette_128.png');
 	width: 25px;
 	height: 25px;
 	background-size: cover;
@@ -1857,7 +1857,7 @@ div.row {
 }
 
 .footer #social .facebook {
-	background-image: url('http://undp.local/sites/all/themes/undp/images/Facebook_logo_128.png');
+	background-image: url('http://undp.dev.upwelling.net/sites/all/themes/undp/images/Facebook_logo_128.png');
 	width: 25px;
 	height: 25px;
 	background-size: cover;
@@ -1866,7 +1866,7 @@ div.row {
 }
 
 .footer #social .linkedin {
-	background-image: url('http://undp.local/sites/all/themes/undp/images/Linkedin_logo_128.png');
+	background-image: url('http://undp.dev.upwelling.net/sites/all/themes/undp/images/Linkedin_logo_128.png');
 	width: 25px;
 	height: 25px;
 	background-size: cover;
@@ -3635,7 +3635,7 @@ div.row,
 
 .region-sidebar-second #block-views-undp-tweets-block .view-undp-tweets .views-field-name span {
 	position: relative;
-	top: -20px;
+	top: 0px;
 }
 
 .region-sidebar-second #block-views-undp-tweets-block .view-undp-tweets .views-field-follow {
