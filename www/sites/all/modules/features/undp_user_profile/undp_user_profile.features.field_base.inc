@@ -122,6 +122,9 @@ function undp_user_profile_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_user_expertise',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
     'indexes' => array(
       'value' => array(
         0 => 'value',

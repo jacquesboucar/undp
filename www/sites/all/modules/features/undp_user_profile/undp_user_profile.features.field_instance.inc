@@ -195,7 +195,7 @@ function undp_user_profile_field_default_field_instances() {
     ),
     'entity_type' => 'user',
     'field_name' => 'field_user_expertise',
-    'label' => 'Domaines d\'expertises',
+    'label' => 'Domaines d\'expertise',
     'required' => 0,
     'settings' => array(
       'user_register_form' => 1,
@@ -277,7 +277,7 @@ function undp_user_profile_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Comment');
-  t('Domaines d\'expertises');
+  t('Domaines d\'expertise');
   t('Email');
   t('Experience dans quel pays de la sous-région + Madagascar');
   t('Expérience de la région ouest-africaine');
