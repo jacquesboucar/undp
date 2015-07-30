@@ -256,7 +256,7 @@ function undp_twitter_views_views_default_views() {
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Twitter <a href="https://twitter.com/RRisques" target="_blank">Suivez-nous</a>';
+  $handler->display->display_options['title'] = '<a href="https://twitter.com/RRisques" target="_blank">Twitter</a>';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['use_more'] = FALSE;
   $handler->display->display_options['defaults']['link_display'] = FALSE;
@@ -389,7 +389,7 @@ function undp_twitter_views_views_default_views() {
     t('Tout'),
     t('Tweets by @%1'),
     t('Block'),
-    t('Twitter <a href="https://twitter.com/RRisques" target="_blank">Suivez-nous</a>'),
+    t('<a href="https://twitter.com/RRisques" target="_blank">Twitter</a>'),
     t('@RRisques'),
     t('Undp Tweets'),
     t('Displays a formatted list of tweets'),
