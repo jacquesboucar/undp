@@ -149,7 +149,7 @@ function undp_event_views_views_default_views() {
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Evenements';
+  $handler->display->display_options['title'] = 'Événements';
   $handler->display->display_options['defaults']['use_more'] = FALSE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
@@ -237,7 +237,7 @@ function undp_event_views_views_default_views() {
     t('Evènements à venir'),
     t('plus'),
     t('Page'),
-    t('Evenements'),
+    t('Événements'),
   );
   $export['new_event'] = $view;
 

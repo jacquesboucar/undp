@@ -22,7 +22,7 @@ function undp_formation_view_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Formations <a href="/formations">Voir toutes les formations</a>';
+  $handler->display->display_options['title'] = '<a href="/formations">Formations</a>';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'Voir toutes les formations';
   $handler->display->display_options['access']['type'] = 'perm';
@@ -122,7 +122,7 @@ function undp_formation_view_views_default_views() {
   $handler->display->display_options['path'] = 'formations';
   $translatables['undp_formation'] = array(
     t('Master'),
-    t('Formations <a href="/formations">Voir toutes les formations</a>'),
+    t('<a href="/formations">Formations</a>'),
     t('Voir toutes les formations'),
     t('Appliquer'),
     t('Réinitialiser'),

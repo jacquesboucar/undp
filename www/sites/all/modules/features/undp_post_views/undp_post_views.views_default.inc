@@ -288,7 +288,7 @@ function undp_post_views_views_default_views() {
   /* Display: Last post */
   $handler = $view->new_display('block', 'Last post', 'block_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Actualités <a href="/actualites">Voir toutes les actualités</a>';
+  $handler->display->display_options['title'] = '<a href="/actualites">Actualités</a>';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';
@@ -310,8 +310,10 @@ function undp_post_views_views_default_views() {
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['path'] = 'actualites';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   /* Champ: Contenu : Date de publication */
   $handler->display->display_options['fields']['created']['id'] = 'created';
   $handler->display->display_options['fields']['created']['table'] = 'node';
@@ -425,7 +427,7 @@ function undp_post_views_views_default_views() {
     t('Recent post'),
     t('Actualités'),
     t('Last post'),
-    t('Actualités <a href="/actualites">Voir toutes les actualités</a>'),
+    t('<a href="/actualites">Actualités</a>'),
     t('plus'),
     t('dans'),
     t('bloc actu mois'),
