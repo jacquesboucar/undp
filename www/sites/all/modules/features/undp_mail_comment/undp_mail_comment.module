@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the undp mail comment feature.
+ */
+
+include_once 'undp_mail_comment.features.inc';

@@ -208,4 +208,18 @@ function undp_config_update_7018() {
       ),
     TRUE
     );
-}  
+}
+
+/**
+ * Module filter module
+ */
+
+function undp_config_update_7019() {
+  module_enable(
+    array(
+      'module_filter',
+      'undp_mail_comment',
+      ),
+    TRUE
+    );
+}
