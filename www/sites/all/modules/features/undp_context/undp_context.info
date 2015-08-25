@@ -3,7 +3,6 @@ core = 7.x
 package = UNDP CONTEXT
 dependencies[] = context
 dependencies[] = ctools
-dependencies[] = linkedin_group_posts
 dependencies[] = on_the_web
 dependencies[] = search
 dependencies[] = undp_config

@@ -223,3 +223,46 @@ function undp_config_update_7019() {
     TRUE
     );
 }
+
+/**
+ * Disable linkedin module.
+ */
+function undp_config_update_7021(){
+  module_disable(
+    array(
+      'linkedin_profile',
+      'linkedin_group_posts',
+      'linkedin',
+    ),
+    TRUE
+  );
+
+}
+
+/**
+ * Uninstall linkedin module.
+ */
+function undp_config_update_7022(){
+  drupal_uninstall_modules(
+    array(
+      'linkedin_profile',
+      'linkedin_group_posts',
+      'linkedin',
+      ), 
+    TRUE
+  );
+}
+
+/**
+ * Module hybridauth module
+ */
+
+function undp_config_update_7023() {
+  module_enable(
+    array(
+      'hybridauth',
+      'undp_social_login',
+      ),
+    TRUE
+    );
+}
