@@ -41,3 +41,6 @@ function undp_facetapi_title($variables) {
   $title = t($variables['title']);
   return t('Filtrer par @title', array('@title' => drupal_strtolower($title)));
 }
+
+// add font css for IE
+drupal_add_css(drupal_get_path('theme', 'undp') . '/font/fonts.css', array('group' => CSS_THEME, 'type' => 'file'));
