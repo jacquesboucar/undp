@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the undp social login feature.
+ */
+
+include_once 'undp_social_login.features.inc';
