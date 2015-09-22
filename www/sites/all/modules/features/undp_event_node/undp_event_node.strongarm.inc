@@ -48,6 +48,9 @@ function undp_event_node_strongarm() {
       'token' => array(
         'custom_settings' => FALSE,
       ),
+      'notifications' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -77,7 +80,7 @@ function undp_event_node_strongarm() {
         'sharethis' => array(
           'default' => array(
             'weight' => '8',
-            'visible' => TRUE,
+            'visible' => FALSE,
           ),
         ),
       ),

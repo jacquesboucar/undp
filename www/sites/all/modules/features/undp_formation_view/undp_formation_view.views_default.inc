@@ -53,8 +53,7 @@ function undp_formation_view_views_default_views() {
   $handler->display->display_options['fields']['field_formation_video']['field'] = 'field_formation_video';
   $handler->display->display_options['fields']['field_formation_video']['label'] = '';
   $handler->display->display_options['fields']['field_formation_video']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_formation_video']['click_sort_column'] = 'input';
-  $handler->display->display_options['fields']['field_formation_video']['type'] = 'youtube_thumbnail';
+  $handler->display->display_options['fields']['field_formation_video']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_formation_video']['settings'] = array(
     'image_style' => 'large',
     'image_link' => 'content',

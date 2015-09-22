@@ -24,6 +24,12 @@ function undp_event_node_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 1,
       ),
+      'notifications' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -73,6 +79,12 @@ function undp_event_node_field_default_field_instances() {
         ),
         'type' => 'date_default',
         'weight' => 2,
+      ),
+      'notifications' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -126,6 +138,12 @@ function undp_event_node_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 9,
       ),
+      'notifications' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'settings' => array(),
@@ -166,6 +184,12 @@ function undp_event_node_field_default_field_instances() {
         ),
         'type' => 'addressfield_default',
         'weight' => 3,
+      ),
+      'notifications' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -216,6 +240,12 @@ function undp_event_node_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 10,
       ),
+      'notifications' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -258,6 +288,12 @@ function undp_event_node_field_default_field_instances() {
         'type' => 'image',
         'weight' => 0,
       ),
+      'notifications' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -274,7 +310,7 @@ function undp_event_node_field_default_field_instances() {
       'default_image' => 0,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '',
+      'max_filesize' => '1 MB',
       'max_resolution' => '',
       'min_resolution' => '',
       'title_field' => 0,
@@ -301,58 +337,15 @@ function undp_event_node_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'leaflet',
-        'settings' => array(
-          'height' => 400,
-          'icon' => array(
-            'html' => '',
-            'htmlClass' => '',
-            'iconAnchor' => array(
-              'x' => '',
-              'y' => '',
-            ),
-            'iconImageStyle' => '',
-            'iconSize' => array(
-              'x' => '',
-              'y' => '',
-            ),
-            'iconType' => 'marker',
-            'iconUrl' => '',
-            'popupAnchor' => array(
-              'x' => '',
-              'y' => '',
-            ),
-            'shadowAnchor' => array(
-              'x' => '',
-              'y' => '',
-            ),
-            'shadowUrl' => '',
-          ),
-          'leaflet_map' => 'OSM Mapnik',
-          'popup' => array(
-            'show' => 1,
-            'text' => '[node:field_event_adress]',
-          ),
-          'vector_display' => array(
-            'clickable' => 0,
-            'color' => '',
-            'dashArray' => '',
-            'fill' => 0,
-            'fillColor' => '',
-            'fillOpacity' => '',
-            'opacity' => '',
-            'stroke' => 0,
-            'stroke_override' => 0,
-            'weight' => '',
-          ),
-          'zoom' => array(
-            'initialZoom' => -1,
-            'maxZoom' => -1,
-            'minZoom' => 1,
-          ),
-        ),
-        'type' => 'geofield_leaflet',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 4,
+      ),
+      'notifications' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',

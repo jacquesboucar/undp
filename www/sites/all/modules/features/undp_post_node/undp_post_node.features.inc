@@ -19,11 +19,11 @@ function undp_post_node_ctools_plugin_api($module = NULL, $api = NULL) {
 function undp_post_node_node_info() {
   $items = array(
     'post' => array(
-      'name' => t('Post'),
+      'name' => t('Poster'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
-      'title_label' => t('Title'),
+      'title_label' => t('Titre'),
       'help' => '',
     ),
   );

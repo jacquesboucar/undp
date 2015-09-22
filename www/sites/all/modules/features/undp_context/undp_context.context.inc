@@ -213,5 +213,38 @@ function undp_context_context_default_contexts() {
   $context->condition_mode = 1;
   $export['sitewide_context'] = $context;
 
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'undp_node_display';
+  $context->description = '';
+  $context->tag = '';
+  $context->conditions = array(
+    'node' => array(
+      'values' => array(
+        'event_calendar' => 'event_calendar',
+        'formation' => 'formation',
+        'post' => 'post',
+      ),
+      'options' => array(
+        'node_form' => '1',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'undp_config-undp_social_share' => array(
+          'module' => 'undp_config',
+          'delta' => 'undp_social_share',
+          'region' => 'content',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+  $export['undp_node_display'] = $context;
+
   return $export;
 }
