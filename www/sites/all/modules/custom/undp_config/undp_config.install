@@ -266,3 +266,27 @@ function undp_config_update_7023() {
     TRUE
     );
 }
+
+/**
+ * Remove following field
+ */
+function undp_config_update_7024() {
+  $field_name = 'field_formation_video';
+  $bundle = 'formation';
+  $entity_type = 'node';
+  $instance = field_info_instance($entity_type, $field_name, $bundle);
+  field_delete_instance($instance);
+  field_purge_batch(10);
+}
+
+/**
+ * Enable link module
+ */
+function undp_config_update_7026() {
+  module_enable(
+    array(
+      'link',
+      ),
+    TRUE
+    );
+}

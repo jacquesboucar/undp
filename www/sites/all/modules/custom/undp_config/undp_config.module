@@ -13,6 +13,9 @@ function undp_config_block_info() {
   $blocks['undp_a_propos'] = array(
      'info' => t('Undp a propos'),
   );
+  $blocks['undp_social_share'] = array(
+     'info' => t('Undp social share'),
+  );
   return $blocks;
 }
 
@@ -31,6 +34,11 @@ function undp_config_block_view($delta = '') {
       $block['subject'] = 'A propos';
       $block['content'] = undp_config_get_content($delta);
       break;
+
+    case 'undp_social_share':
+      $block['subject'] = '';
+      $block['content'] = undp_config_get_content($delta);
+      break;  
   }
   return $block;
 }   
@@ -52,7 +60,16 @@ function undp_config_get_content($delta = '') {
 
     case 'undp_a_propos':
       $content = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a nisl in tellus molestie rutrum. Nullam sed risus venenatis, pretium tellus eu, placerat est. Nunc vel faucibus nulla. Vestibulum ac lacus vel mi ultricies laoreet nec sed mauris. Fusce urna neque, porttitor eget varius sed, maximus eget lectus. Quisque lobortis dolor lacinia ante cursus facilisis. <div id="social"><a href="http://twitter.com" target="_blank" class="twitter"></a><a href="http://facebook.com" target="_blank" class="facebook"></a><a href="http://linkedin.com" target="_blank" class="linkedin"></a></div>';
-      break;   
+      break;
+
+    case 'undp_social_share':
+      global $base_url;
+      $node = node_load(arg(1));
+      $content = '<a href="http://twitter.com/share?url=<'. $base_url . '/node/' . $node->nid . '>' . '&text=<' . $node->title .'>via=<' . $base_url . '/node/' . $node->nid .'>">
+        Twitter</a>';
+      $content .= '<a href="http://www.facebook.com/sharer/sharer.php?u=<'. $base_url . '/node/' . $node->nid . '>">
+       Facebook</a>';
+      $content .= '<a href="http://www.linkedin.com/shareArticle?url=<'. $base_url . '/node/' . $node->nid . '>&title=<' . $node->title .'>&summary=<' . $base_url . '/node/' . $node->nid .'>&source=<SOURCE_URL>">LinkedIn</a>';   
   }
   return $content;
 }  
@@ -92,4 +109,23 @@ function undp_config_form_contact_site_form_alter(&$form, &$form_state) {
   unset($form['copy']);
   $form['mail']['#default_value'] = '';
   $form['name']['#default_value'] = '';
+}
+
+/**
+ * Implements hook_node_insert().
+ */
+function undp_config_node_insert($node) {
+  // Create a message when a user creates a new node.
+  dpm($node);
+  if ($node->type == 'post') {
+    $account = user_load($node->uid);
+    $message_type = 'post_comment';
+    $message = message_create($message_type, array(
+      'uid' => $account->uid));
+    dpm($message);
+    // Save reference to the node in the node   reference field.
+    $wrapper = entity_metadata_wrapper('message', $message);
+    $wrapper->field_node_ref->set($node);
+    $wrapper->save();
+  }  
 }
