@@ -17,6 +17,9 @@ function undp_formation_node_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_formation_image',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
     'indexes' => array(
       'fid' => array(
         0 => 'fid',
@@ -42,16 +45,26 @@ function undp_formation_node_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 0,
     ),
-    'indexes' => array(
-      'video_id' => array(
-        0 => 'video_id',
-      ),
-    ),
+    'indexes' => array(),
     'locked' => 0,
-    'module' => 'youtube',
-    'settings' => array(),
+    'module' => 'link',
+    'settings' => array(
+      'attributes' => array(
+        'class' => '',
+        'rel' => '',
+        'target' => 'default',
+      ),
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 1,
+      'title' => 'optional',
+      'title_maxlength' => 128,
+      'title_value' => '',
+      'url' => 0,
+    ),
     'translatable' => 0,
-    'type' => 'youtube',
+    'type' => 'link_field',
   );
 
   return $field_bases;
