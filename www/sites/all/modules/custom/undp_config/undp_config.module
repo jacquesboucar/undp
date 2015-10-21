@@ -69,8 +69,8 @@ function undp_config_get_content($delta = '') {
       $post = l("Actualités", 'actualites');
       $formation = l("Formations", 'formations');
       $event = l("Evénements", 'evenements');
-      $expert = l("Experts", 'expert');
-      $items['items'] = array($post, $formation, $event, $experts);
+      $expert = l("Experts", 'experts');
+      $items['items'] = array($post, $formation, $event, $expert);
       $content = theme('item_list', $items);
       break;
 
