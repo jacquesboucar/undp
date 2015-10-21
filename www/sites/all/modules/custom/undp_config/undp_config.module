@@ -16,6 +16,9 @@ function undp_config_block_info() {
   $blocks['undp_social_share'] = array(
      'info' => t('Undp social share'),
   );
+  $blocks['undp_main_menu'] = array(
+     'info' => t('Undp main menu'),
+  );
   return $blocks;
 }
 
@@ -38,7 +41,11 @@ function undp_config_block_view($delta = '') {
     case 'undp_social_share':
       $block['subject'] = '';
       $block['content'] = undp_config_get_content($delta);
-      break;  
+      break;
+    case 'undp_main_menu':
+      $block['subject'] = '';
+      $block['content'] = undp_config_get_content($delta);
+      break; 
   }
   return $block;
 }   
@@ -55,6 +62,15 @@ function undp_config_get_content($delta = '') {
       $condition = l("Conditions d’utilisation", 'conditions-d’utilisation');
       $contact = l('Contact', 'contact');
       $items['items'] = array($accueil, $post, $formation, $event, $biblio, $condition, $contact);
+      $content = theme('item_list', $items);
+      break;
+    
+    case 'undp_main_menu':
+      $post = l("Actualités", 'actualites');
+      $formation = l("Formations", 'formations');
+      $event = l("Evénements", 'evenements');
+      $expert = l("Experts", 'expert');
+      $items['items'] = array($post, $formation, $event, $expert);
       $content = theme('item_list', $items);
       break;
 
