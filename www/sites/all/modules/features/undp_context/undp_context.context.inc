@@ -183,29 +183,35 @@ function undp_context_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'undp_config-undp_main_menu' => array(
+          'module' => 'undp_config',
+          'delta' => 'undp_main_menu',
+          'region' => 'header',
+          'weight' => '-10',
+        ),
         'search-form' => array(
           'module' => 'search',
           'delta' => 'form',
           'region' => 'header',
-          'weight' => '-10',
+          'weight' => '-9',
         ),
         'on_the_web-0' => array(
           'module' => 'on_the_web',
           'delta' => '0',
           'region' => 'header',
-          'weight' => '-9',
+          'weight' => '-8',
         ),
         'undp_config-undp_footer_menu' => array(
           'module' => 'undp_config',
           'delta' => 'undp_footer_menu',
           'region' => 'footer',
-          'weight' => '-10',
+          'weight' => '-9',
         ),
         'undp_config-undp_a_propos' => array(
           'module' => 'undp_config',
           'delta' => 'undp_a_propos',
           'region' => 'footer',
-          'weight' => '-9',
+          'weight' => '-8',
         ),
       ),
     ),
